@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\edge_sobel_uart\top_module.ncd
+OUTFILE=E:\edge_sobel_uart\top_module.bit
+FAMILY=Spartan6
+PART=xc6slx9-3ftg256
+WORKINGDIR=E:\edge_sobel_uart
+LICENSE=WebPack
+USER_INFO=__0_0_0

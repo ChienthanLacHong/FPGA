@@ -1,0 +1,1745 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Reading design: top_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "top_module.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "top_module"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-ftg256
+
+---- Source Options
+Top Module Name                    : top_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\edge_sobel_uart\asyn_fifo.v" into library work
+Parsing module <asyn_fifo>.
+Parsing module <dual_port_sync>.
+Analyzing Verilog file "E:\edge_sobel_uart\vga_core.v" into library work
+Parsing module <vga_core>.
+Analyzing Verilog file "E:\edge_sobel_uart\uart_tx.v" into library work
+Parsing module <uart_tx>.
+Analyzing Verilog file "E:\edge_sobel_uart\sobel_convolution.v" into library work
+Parsing module <sobel_convolution>.
+Analyzing Verilog file "E:\edge_sobel_uart\sdram_controller.v" into library work
+Parsing module <sdram_controller>.
+Analyzing Verilog file "E:\edge_sobel_uart\i2c_top.v" into library work
+Parsing module <i2c_top>.
+Analyzing Verilog file "E:\edge_sobel_uart\debounce_explicit.v" into library work
+Parsing module <debounce_explicit>.
+Analyzing Verilog file "E:\edge_sobel_uart\dcm_25MHz.v" into library work
+Parsing module <dcm_25MHz>.
+Analyzing Verilog file "E:\edge_sobel_uart\dcm_24MHz.v" into library work
+Parsing module <dcm_24MHz>.
+Analyzing Verilog file "E:\edge_sobel_uart\vga_interface.v" into library work
+Parsing module <vga_interface>.
+Analyzing Verilog file "E:\edge_sobel_uart\uart_stream.v" into library work
+Parsing module <uart_frame_streamer_1bpp>.
+Analyzing Verilog file "E:\edge_sobel_uart\sobel_for_uart.v" into library work
+Parsing module <sobel_frame_capture_bram_1bpp_lock_dualclk>.
+Analyzing Verilog file "E:\edge_sobel_uart\sdram_interface.v" into library work
+Parsing module <sdram_interface>.
+Analyzing Verilog file "E:\edge_sobel_uart\dcm_165MHz.v" into library work
+Parsing module <dcm_165MHz>.
+Analyzing Verilog file "E:\edge_sobel_uart\camera_interface.v" into library work
+Parsing module <camera_interface>.
+Analyzing Verilog file "E:\edge_sobel_uart\top_module.v" into library work
+Parsing module <top_module>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "E:\edge_sobel_uart\top_module.v" Line 90: Port sdram_clk is not connected to this instance
+
+Elaborating module <top_module>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\top_module.v" Line 59: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\top_module.v" Line 60: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:1016 - "E:\edge_sobel_uart\camera_interface.v" Line 391: Port data_count_w is not connected to this instance
+
+Elaborating module <camera_interface>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\camera_interface.v" Line 303: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\camera_interface.v" Line 313: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\camera_interface.v" Line 323: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\camera_interface.v" Line 332: Result of 32-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <i2c_top(freq=100000)>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\i2c_top.v" Line 92: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\i2c_top.v" Line 117: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\i2c_top.v" Line 129: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\i2c_top.v" Line 130: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\i2c_top.v" Line 161: Result of 32-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\i2c_top.v" Line 201: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\i2c_top.v" Line 202: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\camera_interface.v" Line 372: Assignment to rd_tick ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\camera_interface.v" Line 374: Assignment to rd_data ignored, since the identifier is never used
+
+Elaborating module <dcm_24MHz>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=25,CLKFX_MULTIPLY=12,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\dcm_24MHz.v" Line 128: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\camera_interface.v" Line 388: Assignment to LOCKED ignored, since the identifier is never used
+
+Elaborating module <asyn_fifo(DATA_WIDTH=16,FIFO_DEPTH_WIDTH=10)>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\asyn_fifo.v" Line 72: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\asyn_fifo.v" Line 103: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <dual_port_sync(ADDR_WIDTH=10,DATA_WIDTH=16)>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\camera_interface.v" Line 401: Assignment to empty ignored, since the identifier is never used
+
+Elaborating module <debounce_explicit>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\debounce_explicit.v" Line 88: Result of 22-bit expression is truncated to fit in 21-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\debounce_explicit.v" Line 89: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:634 - "E:\edge_sobel_uart\camera_interface.v" Line 387: Net <RESET> does not have a driver.
+WARNING:HDLCompiler:1016 - "E:\edge_sobel_uart\sdram_interface.v" Line 141: Port data_count_r is not connected to this instance
+WARNING:HDLCompiler:1016 - "E:\edge_sobel_uart\sdram_interface.v" Line 155: Port rd_en is not connected to this instance
+
+Elaborating module <sdram_interface>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_interface.v" Line 85: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_interface.v" Line 93: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_interface.v" Line 94: Result of 32-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_interface.v" Line 99: Result of 32-bit expression is truncated to fit in 15-bit target.
+
+Elaborating module <sdram_controller>.
+
+Elaborating module <ODDR2(DDR_ALIGNMENT="NONE",INIT=1'b0,SRTYPE="SYNC")>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_controller.v" Line 247: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_controller.v" Line 290: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_controller.v" Line 308: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sdram_controller.v" Line 314: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:1016 - "E:\edge_sobel_uart\sobel_convolution.v" Line 222: Port data_count_w is not connected to this instance
+
+Elaborating module <sobel_convolution>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 51: Result of 32-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 78: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 80: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 85: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 87: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 92: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 94: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 117: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 123: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\sobel_convolution.v" Line 127: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <dual_port_sync(ADDR_WIDTH=10,DATA_WIDTH=8)>.
+
+Elaborating module <asyn_fifo(DATA_WIDTH=8,FIFO_DEPTH_WIDTH=10)>.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\asyn_fifo.v" Line 72: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\asyn_fifo.v" Line 103: Result of 32-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <vga_interface>.
+
+Elaborating module <vga_core>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\vga_interface.v" Line 121: Assignment to video_on ignored, since the identifier is never used
+
+Elaborating module <dcm_25MHz>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\dcm_25MHz.v" Line 128: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <sobel_frame_capture_bram_1bpp_lock_dualclk>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\top_module.v" Line 147: Assignment to locked_vga ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\top_module.v" Line 149: Assignment to bram_empty_vga ignored, since the identifier is never used
+
+Elaborating module <uart_frame_streamer_1bpp(CLK_FREQ_HZ=50000000,BAUD=2000000)>.
+
+Elaborating module <uart_tx(CLK_FREQ_HZ=50000000,BAUD=2000000)>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\uart_stream.v" Line 51: Assignment to tx_done ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\edge_sobel_uart\uart_stream.v" Line 158: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <dcm_165MHz>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=3,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=20.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\dcm_165MHz.v" Line 128: Assignment to status_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\edge_sobel_uart\top_module.v" Line 204: Assignment to LOCKED ignored, since the identifier is never used
+WARNING:HDLCompiler:634 - "E:\edge_sobel_uart\top_module.v" Line 203: Net <RESET> does not have a driver.
+WARNING:HDLCompiler:552 - "E:\edge_sobel_uart\top_module.v" Line 66: Input port key[3] is not connected on this instance
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <top_module>.
+    Related source file is "E:\edge_sobel_uart\top_module.v".
+WARNING:Xst:2898 - Port 'key', unconnected in block instance 'm0', is tied to GND.
+WARNING:Xst:647 - Input <key<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\edge_sobel_uart\top_module.v" line 90: Output port <sdram_clk> of the instance <m1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\top_module.v" line 139: Output port <locked_vga> of the instance <m_cap> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\top_module.v" line 139: Output port <bram_empty_vga> of the instance <m_cap> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\top_module.v" line 169: Output port <db_level> of the instance <m3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\top_module.v" line 178: Output port <db_level> of the instance <m4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\top_module.v" line 187: Output port <db_level> of the instance <m5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\top_module.v" line 197: Output port <LOCKED> of the instance <m6> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <RESET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <sobel>.
+    Found 8-bit register for signal <threshold>.
+    Found 9-bit subtractor for signal <GND_1_o_GND_1_o_sub_4_OUT> created at line 60.
+    Found 9-bit adder for signal <n0045[8:0]> created at line 59.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   9 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <top_module> synthesized.
+
+Synthesizing Unit <camera_interface>.
+    Related source file is "E:\edge_sobel_uart\camera_interface.v".
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 365: Output port <rd_data> of the instance <m0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 365: Output port <rd_tick> of the instance <m0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 381: Output port <LOCKED> of the instance <m1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 391: Output port <data_count_w> of the instance <m2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 391: Output port <empty> of the instance <m2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 405: Output port <db_level> of the instance <m3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 414: Output port <db_level> of the instance <m4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 423: Output port <db_level> of the instance <m5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\camera_interface.v" line 432: Output port <db_level> of the instance <m6> is unconnected or connected to loadless signal.
+WARNING:Xst:2999 - Signal 'message', unconnected in block 'camera_interface', is tied to its initial value.
+WARNING:Xst:653 - Signal <RESET> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <message>, simulation mismatch.
+    Found 251x16-bit single-port Read Only RAM <Mram_message> for signal <message>.
+    Found 4-bit register for signal <led_q>.
+    Found 4-bit register for signal <state_q>.
+    Found 28-bit register for signal <delay_q>.
+    Found 8-bit register for signal <message_index_q>.
+    Found 8-bit register for signal <addr_q>.
+    Found 8-bit register for signal <data_q>.
+    Found 8-bit register for signal <brightness_q>.
+    Found 8-bit register for signal <contrast_q>.
+    Found 16-bit register for signal <pixel_q>.
+    Found 3-bit register for signal <sccb_state_q>.
+    Found 1-bit register for signal <start_delay_q>.
+    Found 1-bit register for signal <pclk_1>.
+    Found 1-bit register for signal <pclk_2>.
+    Found 1-bit register for signal <href_1>.
+    Found 1-bit register for signal <href_2>.
+    Found 1-bit register for signal <vsync_1>.
+    Found 1-bit register for signal <vsync_2>.
+    Found finite state machine <FSM_1> for signal <sccb_state_q>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 14                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_100 (rising_edge)                          |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Power Up State     | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_0> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 43                                             |
+    | Inputs             | 10                                             |
+    | Outputs            | 10                                             |
+    | Clock              | clk_100 (rising_edge)                          |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit subtractor for signal <GND_2_o_GND_2_o_sub_74_OUT> created at line 303.
+    Found 28-bit adder for signal <delay_q[27]_GND_2_o_add_10_OUT> created at line 216.
+    Found 8-bit adder for signal <message_index_q[7]_GND_2_o_add_28_OUT> created at line 254.
+    Found 9-bit adder for signal <n0320[8:0]> created at line 303.
+    Found 8-bit adder for signal <contrast_q[7]_GND_2_o_add_90_OUT> created at line 323.
+    Found 8-bit subtractor for signal <GND_2_o_GND_2_o_sub_92_OUT<7:0>> created at line 332.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   6 Adder/Subtractor(s).
+	inferred  95 D-type flip-flop(s).
+	inferred  81 Multiplexer(s).
+	inferred   2 Finite State Machine(s).
+Unit <camera_interface> synthesized.
+
+Synthesizing Unit <i2c_top>.
+    Related source file is "E:\edge_sobel_uart\i2c_top.v".
+        freq = 100000
+    Found 4-bit register for signal <idx_q>.
+    Found 4-bit register for signal <state_q>.
+    Found 9-bit register for signal <wr_data_q>.
+    Found 9-bit register for signal <counter_q>.
+    Found 8-bit register for signal <rd_data_q>.
+    Found 1-bit register for signal <start_q>.
+    Found 1-bit register for signal <scl_q>.
+    Found 1-bit register for signal <sda_q>.
+    Found finite state machine <FSM_2> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 36                                             |
+    | Inputs             | 8                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit adder for signal <counter_q[8]_GND_3_o_add_5_OUT> created at line 92.
+    Found 4-bit subtractor for signal <GND_3_o_GND_3_o_sub_40_OUT<3:0>> created at line 161.
+    Found 1-bit 9-to-1 multiplexer for signal <idx_q[3]_X_3_o_Mux_18_o> created at line 129.
+    Found 1-bit tristate buffer for signal <sda> created at line 202
+    Found 4-bit comparator lessequal for signal <n0048> created at line 160
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  33 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  28 Multiplexer(s).
+	inferred   1 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <i2c_top> synthesized.
+
+Synthesizing Unit <dcm_24MHz>.
+    Related source file is "E:\edge_sobel_uart\dcm_24MHz.v".
+    Summary:
+	no macro.
+Unit <dcm_24MHz> synthesized.
+
+Synthesizing Unit <asyn_fifo_1>.
+    Related source file is "E:\edge_sobel_uart\asyn_fifo.v".
+        DATA_WIDTH = 16
+        FIFO_DEPTH_WIDTH = 10
+    Found 1-bit register for signal <empty>.
+    Found 11-bit register for signal <r_ptr_q>.
+    Found 11-bit register for signal <w_ptr_q>.
+    Found 1-bit register for signal <full>.
+    Found 11-bit register for signal <r_ptr_sync>.
+    Found 10-bit register for signal <data_count_w>.
+    Found 10-bit register for signal <data_count_r>.
+    Found 11-bit register for signal <r_grey_sync_temp>.
+    Found 11-bit register for signal <r_grey_sync>.
+    Found 11-bit register for signal <w_grey_sync_temp>.
+    Found 11-bit register for signal <w_grey_sync>.
+    Found 12-bit subtractor for signal <GND_8_o_GND_8_o_sub_22_OUT> created at line 72.
+    Found 12-bit subtractor for signal <GND_8_o_GND_8_o_sub_23_OUT> created at line 72.
+    Found 12-bit subtractor for signal <GND_8_o_GND_8_o_sub_50_OUT> created at line 103.
+    Found 12-bit subtractor for signal <GND_8_o_GND_8_o_sub_51_OUT> created at line 103.
+    Found 11-bit adder for signal <w_ptr_q[10]_GND_8_o_add_1_OUT> created at line 55.
+    Found 32-bit adder for signal <GND_8_o_GND_8_o_add_23_OUT> created at line 72.
+    Found 11-bit adder for signal <r_ptr_q[10]_GND_8_o_add_34_OUT> created at line 89.
+    Found 32-bit adder for signal <GND_8_o_GND_8_o_add_51_OUT> created at line 103.
+    Found 11-bit comparator equal for signal <w_grey_nxt[10]_r_grey_sync[10]_equal_7_o> created at line 67
+    Found 11-bit comparator equal for signal <w_grey[10]_r_grey_sync[10]_equal_9_o> created at line 69
+    Found 11-bit comparator lessequal for signal <n0021> created at line 72
+    Found 11-bit comparator equal for signal <r_grey_nxt[10]_w_grey_sync[10]_equal_37_o> created at line 99
+    Found 11-bit comparator equal for signal <r_grey[10]_w_grey_sync[10]_equal_38_o> created at line 100
+    Found 11-bit comparator lessequal for signal <n0042> created at line 103
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred  99 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <asyn_fifo_1> synthesized.
+
+Synthesizing Unit <dual_port_sync_1>.
+    Related source file is "E:\edge_sobel_uart\asyn_fifo.v".
+        ADDR_WIDTH = 10
+        DATA_WIDTH = 16
+    Found 1024x16-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 10-bit register for signal <addr_b_q>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <dual_port_sync_1> synthesized.
+
+Synthesizing Unit <debounce_explicit>.
+    Related source file is "E:\edge_sobel_uart\debounce_explicit.v".
+    Found 21-bit register for signal <timer_reg>.
+    Found 2-bit register for signal <state_reg>.
+    Found finite state machine <FSM_3> for signal <state_reg>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 10                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 21-bit adder for signal <timer_reg[20]_GND_11_o_add_16_OUT> created at line 88.
+    Found 1-bit 4-to-1 multiplexer for signal <timer_inc> created at line 51.
+    Found 1-bit 4-to-1 multiplexer for signal <timer_zero> created at line 51.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <debounce_explicit> synthesized.
+
+Synthesizing Unit <sdram_interface>.
+    Related source file is "E:\edge_sobel_uart\sdram_interface.v".
+INFO:Xst:3210 - "E:\edge_sobel_uart\sdram_interface.v" line 141: Output port <data_count_r> of the instance <m2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\sdram_interface.v" line 141: Output port <full> of the instance <m2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\sdram_interface.v" line 155: Output port <rd_en> of the instance <m3> is unconnected or connected to loadless signal.
+    Found 15-bit register for signal <colored_addr_q>.
+    Found 15-bit register for signal <sobel_addr_q>.
+    Found 15-bit register for signal <rd_addr_q>.
+    Found 1-bit register for signal <orig_q>.
+    Found 1-bit register for signal <state_q>.
+    Found 16-bit adder for signal <n0117[15:0]> created at line 85.
+    Found 16-bit adder for signal <n0119[15:0]> created at line 93.
+    Found 16-bit adder for signal <n0121[15:0]> created at line 94.
+    Found 16-bit adder for signal <n0123[15:0]> created at line 99.
+    Found 10-bit comparator greater for signal <PWR_14_o_data_count_camera_fifo[9]_LessThan_8_o> created at line 72
+    Found 10-bit comparator greater for signal <data_count_w[9]_GND_12_o_LessThan_12_o> created at line 90
+    Found 10-bit comparator greater for signal <n0021> created at line 96
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  26 Multiplexer(s).
+Unit <sdram_interface> synthesized.
+
+Synthesizing Unit <sdram_controller>.
+    Related source file is "E:\edge_sobel_uart\sdram_controller.v".
+    Found 4-bit register for signal <cmd_q>.
+    Found 4-bit register for signal <nxt_q>.
+    Found 4-bit register for signal <state_q>.
+    Found 16-bit register for signal <delay_ctr_q>.
+    Found 16-bit register for signal <f2s_data_q>.
+    Found 16-bit register for signal <s2f_data_q>.
+    Found 11-bit register for signal <refresh_ctr_q>.
+    Found 13-bit register for signal <s_addr_q>.
+    Found 2-bit register for signal <s_ba_q>.
+    Found 15-bit register for signal <f_addr_q>.
+    Found 10-bit register for signal <burst_index_q>.
+    Found 1-bit register for signal <tri_q>.
+    Found 1-bit register for signal <rw_q>.
+    Found 1-bit register for signal <rw_en_q>.
+    Found 1-bit register for signal <s2f_data_valid_q>.
+    Found 1-bit register for signal <refresh_flag_q>.
+    Found 16-bit subtractor for signal <_n0177> created at line 205.
+    Found 11-bit adder for signal <refresh_ctr_q[10]_GND_13_o_add_12_OUT> created at line 194.
+    Found 10-bit adder for signal <burst_index_q[9]_GND_13_o_add_42_OUT> created at line 314.
+    Found 1-bit tristate buffer for signal <s_dq<15>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<14>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<13>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<12>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<11>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<10>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<9>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<8>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<7>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<6>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<5>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<4>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<3>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<2>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<1>> created at line 345
+    Found 1-bit tristate buffer for signal <s_dq<0>> created at line 345
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred 116 D-type flip-flop(s).
+	inferred  61 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <sdram_controller> synthesized.
+
+Synthesizing Unit <sobel_convolution>.
+    Related source file is "E:\edge_sobel_uart\sobel_convolution.v".
+WARNING:Xst:647 - Input <din<5:5>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\edge_sobel_uart\sobel_convolution.v" line 222: Output port <data_count_w> of the instance <m6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\sobel_convolution.v" line 222: Output port <full> of the instance <m6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\sobel_convolution.v" line 222: Output port <empty> of the instance <m6> is unconnected or connected to loadless signal.
+    Found 8-bit register for signal <temp2_q>.
+    Found 8-bit register for signal <temp3_q>.
+    Found 8-bit register for signal <temp1_q>.
+    Found 10-bit register for signal <addr_b_q>.
+    Found 11-bit register for signal <pixel_counter_q>.
+    Found 1-bit register for signal <state_q>.
+    Found 1-bit register for signal <rd_en>.
+    Found 8-bit subtractor for signal <dout_1[7]_dout_2[7]_sub_38_OUT> created at line 120.
+    Found 8-bit subtractor for signal <dout_2[7]_dout_3[7]_sub_40_OUT> created at line 124.
+    Found 8-bit subtractor for signal <dout_3[7]_dout_1[7]_sub_42_OUT> created at line 128.
+    Found 8-bit subtractor for signal <dout_4[7]_unary_minus_51_OUT> created at line 133.
+    Found 8-bit subtractor for signal <GND_32_o_unary_minus_53_OUT> created at line 134.
+    Found 12-bit adder for signal <n0156[11:0]> created at line 51.
+    Found 6-bit adder for signal <n0159[5:0]> created at line 57.
+    Found 7-bit adder for signal <n0145> created at line 57.
+    Found 8-bit adder for signal <n0166> created at line 96.
+    Found 8-bit adder for signal <temp1_q[7]_temp3_q[7]_add_28_OUT> created at line 96.
+    Found 8-bit adder for signal <n0175> created at line 131.
+    Found 8-bit adder for signal <dout_4[7]_dout_6[7]_add_49_OUT> created at line 131.
+    Found 8-bit adder for signal <dout_4[7]_GND_32_o_add_54_OUT> created at line 135.
+    Found 10-bit subtractor for signal <GND_32_o_GND_32_o_sub_39_OUT<9:0>> created at line 123.
+    Found 10-bit subtractor for signal <GND_32_o_GND_32_o_sub_41_OUT<9:0>> created at line 127.
+    Found 8-bit subtractor for signal <temp3_q[7]_temp1_q[7]_add_30_OUT> created at line 97.
+    Found 11-bit comparator lessequal for signal <n0067> created at line 148
+    Found 11-bit comparator lessequal for signal <n0069> created at line 149
+    Found 11-bit comparator lessequal for signal <n0071> created at line 150
+    Summary:
+	inferred  14 Adder/Subtractor(s).
+	inferred  47 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+	inferred  33 Multiplexer(s).
+Unit <sobel_convolution> synthesized.
+
+Synthesizing Unit <div_7u_2u>.
+    Related source file is "".
+    Found 9-bit adder for signal <GND_33_o_b[1]_add_1_OUT> created at line 0.
+    Found 8-bit adder for signal <GND_33_o_b[1]_add_3_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_b[1]_add_5_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_33_o_add_7_OUT> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_33_o_add_9_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_33_o_add_11_OUT[6:0]> created at line 0.
+    Found 7-bit adder for signal <a[6]_GND_33_o_add_13_OUT[6:0]> created at line 0.
+    Found 9-bit comparator lessequal for signal <BUS_0001> created at line 0
+    Found 8-bit comparator lessequal for signal <BUS_0002> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0003> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0004> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0005> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0006> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0007> created at line 0
+    Found 7-bit comparator lessequal for signal <BUS_0008> created at line 0
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   8 Comparator(s).
+	inferred  31 Multiplexer(s).
+Unit <div_7u_2u> synthesized.
+
+Synthesizing Unit <dual_port_sync_2>.
+    Related source file is "E:\edge_sobel_uart\asyn_fifo.v".
+        ADDR_WIDTH = 10
+        DATA_WIDTH = 8
+    Found 1024x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 10-bit register for signal <addr_b_q>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <dual_port_sync_2> synthesized.
+
+Synthesizing Unit <asyn_fifo_2>.
+    Related source file is "E:\edge_sobel_uart\asyn_fifo.v".
+        DATA_WIDTH = 8
+        FIFO_DEPTH_WIDTH = 10
+    Found 1-bit register for signal <empty>.
+    Found 11-bit register for signal <r_ptr_q>.
+    Found 11-bit register for signal <w_ptr_q>.
+    Found 1-bit register for signal <full>.
+    Found 11-bit register for signal <r_ptr_sync>.
+    Found 10-bit register for signal <data_count_w>.
+    Found 10-bit register for signal <data_count_r>.
+    Found 11-bit register for signal <r_grey_sync_temp>.
+    Found 11-bit register for signal <r_grey_sync>.
+    Found 11-bit register for signal <w_grey_sync_temp>.
+    Found 11-bit register for signal <w_grey_sync>.
+    Found 12-bit subtractor for signal <GND_36_o_GND_36_o_sub_22_OUT> created at line 72.
+    Found 12-bit subtractor for signal <GND_36_o_GND_36_o_sub_23_OUT> created at line 72.
+    Found 12-bit subtractor for signal <GND_36_o_GND_36_o_sub_50_OUT> created at line 103.
+    Found 12-bit subtractor for signal <GND_36_o_GND_36_o_sub_51_OUT> created at line 103.
+    Found 11-bit adder for signal <w_ptr_q[10]_GND_36_o_add_1_OUT> created at line 55.
+    Found 32-bit adder for signal <GND_36_o_GND_36_o_add_23_OUT> created at line 72.
+    Found 11-bit adder for signal <r_ptr_q[10]_GND_36_o_add_34_OUT> created at line 89.
+    Found 32-bit adder for signal <GND_36_o_GND_36_o_add_51_OUT> created at line 103.
+    Found 11-bit comparator equal for signal <w_grey_nxt[10]_r_grey_sync[10]_equal_7_o> created at line 67
+    Found 11-bit comparator equal for signal <w_grey[10]_r_grey_sync[10]_equal_9_o> created at line 69
+    Found 11-bit comparator lessequal for signal <n0021> created at line 72
+    Found 11-bit comparator equal for signal <r_grey_nxt[10]_w_grey_sync[10]_equal_37_o> created at line 99
+    Found 11-bit comparator equal for signal <r_grey[10]_w_grey_sync[10]_equal_38_o> created at line 100
+    Found 11-bit comparator lessequal for signal <n0042> created at line 103
+    Summary:
+	inferred   8 Adder/Subtractor(s).
+	inferred  99 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   5 Multiplexer(s).
+Unit <asyn_fifo_2> synthesized.
+
+Synthesizing Unit <vga_interface>.
+    Related source file is "E:\edge_sobel_uart\vga_interface.v".
+INFO:Xst:3210 - "E:\edge_sobel_uart\vga_interface.v" line 116: Output port <video_on> of the instance <m0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\edge_sobel_uart\vga_interface.v" line 126: Output port <LOCKED> of the instance <m1> is unconnected or connected to loadless signal.
+    Found 2-bit register for signal <state_q>.
+    Found finite state machine <FSM_4> for signal <state_q>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 8                                              |
+    | Inputs             | 4                                              |
+    | Outputs            | 2                                              |
+    | Clock              | clk_out (rising_edge)                          |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 5-bit 4-to-1 multiplexer for signal <vga_out_r> created at line 59.
+    Found 6-bit 4-to-1 multiplexer for signal <vga_out_g> created at line 59.
+    Found 5-bit 4-to-1 multiplexer for signal <vga_out_b> created at line 59.
+    Found 1-bit 4-to-1 multiplexer for signal <rd_en> created at line 59.
+    Found 8-bit comparator greater for signal <edge_bit> created at line 42
+    Found 12-bit comparator lessequal for signal <n0015> created at line 82
+    Found 12-bit comparator lessequal for signal <n0017> created at line 82
+    Found 12-bit comparator greater for signal <pixel_y[11]_GND_39_o_LessThan_21_o> created at line 82
+    Summary:
+	inferred   4 Comparator(s).
+	inferred  13 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <vga_interface> synthesized.
+
+Synthesizing Unit <vga_core>.
+    Related source file is "E:\edge_sobel_uart\vga_core.v".
+    Found 12-bit register for signal <hctr_q>.
+    Found 12-bit register for signal <vctr_q>.
+    Found 1-bit register for signal <vsync_q>.
+    Found 1-bit register for signal <hsync_q>.
+    Found 12-bit adder for signal <hctr_q[11]_GND_40_o_add_3_OUT> created at line 46.
+    Found 12-bit adder for signal <vctr_q[11]_GND_40_o_add_7_OUT> created at line 49.
+    Found 12-bit comparator greater for signal <hctr_q[11]_GND_40_o_LessThan_11_o> created at line 51
+    Found 12-bit comparator greater for signal <vctr_q[11]_GND_40_o_LessThan_12_o> created at line 51
+    Found 12-bit comparator lessequal for signal <n0014> created at line 53
+    Found 12-bit comparator lessequal for signal <n0016> created at line 53
+    Found 12-bit comparator lessequal for signal <n0020> created at line 54
+    Found 12-bit comparator lessequal for signal <n0022> created at line 54
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  26 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <vga_core> synthesized.
+
+Synthesizing Unit <dcm_25MHz>.
+    Related source file is "E:\edge_sobel_uart\dcm_25MHz.v".
+    Summary:
+	no macro.
+Unit <dcm_25MHz> synthesized.
+
+Synthesizing Unit <sobel_frame_capture_bram_1bpp_lock_dualclk>.
+    Related source file is "E:\edge_sobel_uart\sobel_for_uart.v".
+        WIDTH = 640
+        HEIGHT = 480
+        PAYLOAD_LEN = 38400
+        ADDR_WIDTH = 16
+    Set property "ram_style = block" for signal <ram>.
+WARNING:Xst:647 - Input <sobel_stream_pixel<7:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <ram>, simulation mismatch.
+    Found 38400x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 1-bit register for signal <bram_empty_vga>.
+    Found 32-bit register for signal <frame_id_vga>.
+    Found 16-bit register for signal <wr_addr>.
+    Found 8-bit register for signal <pack_reg>.
+    Found 3-bit register for signal <pack_cnt>.
+    Found 3-bit register for signal <cons_sync>.
+    Found 1-bit register for signal <cons_prev>.
+    Found 1-bit register for signal <frame_ready_vga>.
+    Found 1-bit register for signal <locked_vga>.
+    Found 1-bit register for signal <capturing>.
+    Found 8-bit register for signal <rd_data>.
+    Found 32-bit adder for signal <frame_id_vga[31]_GND_43_o_add_14_OUT> created at line 122.
+    Found 16-bit adder for signal <wr_addr[15]_GND_43_o_add_15_OUT> created at line 124.
+    Found 3-bit adder for signal <pack_cnt[2]_GND_43_o_add_18_OUT> created at line 128.
+    Found 16-bit comparator greater for signal <wr_addr[15]_PWR_29_o_LessThan_12_o> created at line 109
+    Found 16-bit comparator greater for signal <rd_addr[15]_PWR_29_o_LessThan_33_o> created at line 143
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  75 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  23 Multiplexer(s).
+Unit <sobel_frame_capture_bram_1bpp_lock_dualclk> synthesized.
+
+Synthesizing Unit <uart_frame_streamer_1bpp>.
+    Related source file is "E:\edge_sobel_uart\uart_stream.v".
+        CLK_FREQ_HZ = 50000000
+        BAUD = 2000000
+        WIDTH = 640
+        HEIGHT = 480
+        PAYLOAD_LEN = 38400
+        ADDR_WIDTH = 16
+        HEADER_LEN = 20
+INFO:Xst:3210 - "E:\edge_sobel_uart\uart_stream.v" line 45: Output port <tx_done> of the instance <u_tx> is unconnected or connected to loadless signal.
+    Found 3-bit register for signal <st>.
+    Found 16-bit register for signal <hdr_i>.
+    Found 16-bit register for signal <rd_addr>.
+    Found 32-bit register for signal <pay_i>.
+    Found 32-bit register for signal <frame_id_lat>.
+    Found 8-bit register for signal <tx_data>.
+    Found 2-bit register for signal <fr_sync>.
+    Found 1-bit register for signal <tx_start>.
+    Found 1-bit register for signal <consume_toggle_uart>.
+    Found finite state machine <FSM_5> for signal <st>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 12                                             |
+    | Inputs             | 4                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk_uart (rising_edge)                         |
+    | Reset              | rst_n (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16-bit adder for signal <hdr_i[15]_GND_45_o_add_28_OUT> created at line 140.
+    Found 32-bit adder for signal <n0100[31:0]> created at line 158.
+    Found 16-bit comparator greater for signal <GND_45_o_INV_210_o> created at line 133
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 108 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  21 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <uart_frame_streamer_1bpp> synthesized.
+
+Synthesizing Unit <uart_tx>.
+    Related source file is "E:\edge_sobel_uart\uart_tx.v".
+        CLK_FREQ_HZ = 50000000
+        BAUD = 2000000
+    Found 1-bit register for signal <tx_line>.
+    Found 10-bit register for signal <shreg>.
+    Found 4-bit register for signal <bit_pos>.
+    Found 32-bit register for signal <div_cnt>.
+    Found 1-bit register for signal <tx_busy>.
+    Found 1-bit register for signal <tx_done>.
+    Found 4-bit adder for signal <bit_pos[3]_GND_46_o_add_5_OUT> created at line 53.
+    Found 32-bit adder for signal <div_cnt[31]_GND_46_o_add_8_OUT> created at line 62.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  49 D-type flip-flop(s).
+	inferred   9 Multiplexer(s).
+Unit <uart_tx> synthesized.
+
+Synthesizing Unit <dcm_165MHz>.
+    Related source file is "E:\edge_sobel_uart\dcm_165MHz.v".
+    Summary:
+	no macro.
+Unit <dcm_165MHz> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 1024x16-bit dual-port RAM                             : 2
+ 1024x8-bit dual-port RAM                              : 7
+ 251x16-bit single-port Read Only RAM                  : 1
+ 38400x8-bit dual-port RAM                             : 1
+# Adders/Subtractors                                   : 78
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 7
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 12
+ 16-bit adder                                          : 6
+ 16-bit subtractor                                     : 1
+ 21-bit adder                                          : 7
+ 28-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 9
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 6
+ 8-bit adder                                           : 8
+ 8-bit subtractor                                      : 5
+ 9-bit adder                                           : 4
+ 9-bit subtractor                                      : 2
+# Registers                                            : 130
+ 1-bit register                                        : 38
+ 10-bit register                                       : 18
+ 11-bit register                                       : 23
+ 12-bit register                                       : 2
+ 13-bit register                                       : 1
+ 15-bit register                                       : 4
+ 16-bit register                                       : 7
+ 2-bit register                                        : 2
+ 21-bit register                                       : 7
+ 28-bit register                                       : 1
+ 3-bit register                                        : 2
+ 32-bit register                                       : 4
+ 4-bit register                                        : 6
+ 8-bit register                                        : 13
+ 9-bit register                                        : 2
+# Comparators                                          : 46
+ 10-bit comparator greater                             : 3
+ 11-bit comparator equal                               : 12
+ 11-bit comparator lessequal                           : 9
+ 12-bit comparator greater                             : 3
+ 12-bit comparator lessequal                           : 6
+ 16-bit comparator greater                             : 3
+ 4-bit comparator lessequal                            : 1
+ 7-bit comparator lessequal                            : 6
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 381
+ 1-bit 2-to-1 multiplexer                              : 157
+ 1-bit 4-to-1 multiplexer                              : 15
+ 1-bit 9-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 13
+ 11-bit 2-to-1 multiplexer                             : 4
+ 12-bit 2-to-1 multiplexer                             : 3
+ 13-bit 2-to-1 multiplexer                             : 6
+ 15-bit 2-to-1 multiplexer                             : 8
+ 16-bit 2-to-1 multiplexer                             : 13
+ 2-bit 2-to-1 multiplexer                              : 6
+ 21-bit 2-to-1 multiplexer                             : 7
+ 28-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 18
+ 4-bit 2-to-1 multiplexer                              : 52
+ 5-bit 2-to-1 multiplexer                              : 6
+ 5-bit 4-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 3
+ 6-bit 4-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 57
+ 9-bit 2-to-1 multiplexer                              : 2
+# Tristates                                            : 17
+ 1-bit tristate buffer                                 : 17
+# FSMs                                                 : 12
+# Xors                                                 : 43
+ 1-bit xor10                                           : 3
+ 1-bit xor11                                           : 3
+ 1-bit xor2                                            : 4
+ 1-bit xor3                                            : 3
+ 1-bit xor4                                            : 3
+ 1-bit xor5                                            : 3
+ 1-bit xor6                                            : 3
+ 1-bit xor7                                            : 3
+ 1-bit xor8                                            : 3
+ 1-bit xor9                                            : 3
+ 11-bit xor2                                           : 12
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <temp1_q_7> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <temp2_q_7> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <temp3_q_7> (without init value) has a constant value of 0 in block <m3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <pack_reg_7> of sequential type is unconnected in block <m_cap>.
+WARNING:Xst:2677 - Node <shreg_0> of sequential type is unconnected in block <u_tx>.
+WARNING:Xst:2404 -  FFs/Latches <temp1_q<7:7>> (without init value) have a constant value of 0 in block <sobel_convolution>.
+WARNING:Xst:2404 -  FFs/Latches <temp2_q<7:7>> (without init value) have a constant value of 0 in block <sobel_convolution>.
+WARNING:Xst:2404 -  FFs/Latches <temp3_q<7:7>> (without init value) have a constant value of 0 in block <sobel_convolution>.
+
+Synthesizing (advanced) Unit <asyn_fifo_1>.
+The following registers are absorbed into counter <w_ptr_q>: 1 register on signal <w_ptr_q>.
+Unit <asyn_fifo_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <asyn_fifo_2>.
+The following registers are absorbed into counter <w_ptr_q>: 1 register on signal <w_ptr_q>.
+Unit <asyn_fifo_2> synthesized (advanced).
+
+Synthesizing (advanced) Unit <camera_interface>.
+The following registers are absorbed into counter <message_index_q>: 1 register on signal <message_index_q>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_message> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 251-word x 16-bit                   |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <message_index_q> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <camera_interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <debounce_explicit>.
+The following registers are absorbed into counter <timer_reg>: 1 register on signal <timer_reg>.
+Unit <debounce_explicit> synthesized (advanced).
+
+Synthesizing (advanced) Unit <dual_port_sync_1>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk_w>         | rise     |
+    |     weA            | connected to signal <we>            | high     |
+    |     addrA          | connected to signal <addr_a>        |          |
+    |     diA            | connected to signal <din>           |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 16-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_r>         | rise     |
+    |     addrB          | connected to signal <addr_b>        |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <dual_port_sync_1> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sdram_controller>.
+The following registers are absorbed into counter <refresh_ctr_q>: 1 register on signal <refresh_ctr_q>.
+Unit <sdram_controller> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sdram_interface>.
+INFO:Xst:3226 - The RAM <m3/m6/m0/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <m3/m6/m0/addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <m3/m6/we>      | high     |
+    |     addrA          | connected to signal <m3/m6/w_ptr_q<9:0>> |          |
+    |     diA            | connected to signal <m3/data_write> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <m3/m6/r_ptr_d<9:0>> |          |
+    |     doB            | connected to signal <sobel_data>    |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <m3/m5/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <m3/m5/addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <m3/we_3>       | high     |
+    |     addrA          | connected to signal <m3/addr_a_y>   |          |
+    |     diA            | connected to signal <m3/din_ram_x>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <m3/addr_b_d>   |          |
+    |     doB            | connected to signal <m3/dout_6>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <m3/m3/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <m3/m3/addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <m3/we_1>       | high     |
+    |     addrA          | connected to signal <m3/addr_a_y>   |          |
+    |     diA            | connected to signal <m3/din_ram_x>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <m3/addr_b_d>   |          |
+    |     doB            | connected to signal <m3/dout_4>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <m3/m4/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <m3/m4/addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <m3/we_2>       | high     |
+    |     addrA          | connected to signal <m3/addr_a_y>   |          |
+    |     diA            | connected to signal <m3/din_ram_x>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <m3/addr_b_d>   |          |
+    |     doB            | connected to signal <m3/dout_5>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <m3/m2/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <m3/m2/addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <m3/we_3>       | high     |
+    |     addrA          | connected to signal <m3/addr_a_y>   |          |
+    |     diA            | connected to signal <m3/din_ram_y>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <m3/addr_b_d>   |          |
+    |     doB            | connected to signal <m3/dout_3>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <m3/m0/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <m3/m0/addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <m3/we_1>       | high     |
+    |     addrA          | connected to signal <m3/addr_a_y>   |          |
+    |     diA            | connected to signal <m3/din_ram_y>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <m3/addr_b_d>   |          |
+    |     doB            | connected to signal <m3/dout_1>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <m3/m1/Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <m3/m1/addr_b_q>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <m3/we_2>       | high     |
+    |     addrA          | connected to signal <m3/addr_a_y>   |          |
+    |     diA            | connected to signal <m3/din_ram_y>  |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 1024-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     addrB          | connected to signal <m3/addr_b_d>   |          |
+    |     doB            | connected to signal <m3/dout_2>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <sdram_interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <sobel_frame_capture_bram_1bpp_lock_dualclk>.
+The following registers are absorbed into counter <frame_id_vga>: 1 register on signal <frame_id_vga>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <rd_data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk_vga>       | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <wr_addr>       |          |
+    |     diA            | connected to signal <(pack_reg,sobel_stream_pixel)> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 38400-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_uart>      | rise     |
+    |     addrB          | connected to signal <rd_addr>       |          |
+    |     doB            | connected to signal <rd_data>       |          |
+    |     dorstB         | connected to internal node          | low      |
+    | reset value        | 00000000                                       |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <sobel_frame_capture_bram_1bpp_lock_dualclk> synthesized (advanced).
+
+Synthesizing (advanced) Unit <uart_frame_streamer_1bpp>.
+The following registers are absorbed into counter <hdr_i>: 1 register on signal <hdr_i>.
+Unit <uart_frame_streamer_1bpp> synthesized (advanced).
+
+Synthesizing (advanced) Unit <vga_core>.
+The following registers are absorbed into counter <hctr_q>: 1 register on signal <hctr_q>.
+Unit <vga_core> synthesized (advanced).
+WARNING:Xst:2677 - Node <pack_reg_7> of sequential type is unconnected in block <sobel_frame_capture_bram_1bpp_lock_dualclk>.
+WARNING:Xst:2677 - Node <shreg_0> of sequential type is unconnected in block <uart_tx>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 11
+ 1024x16-bit dual-port block RAM                       : 2
+ 1024x8-bit dual-port block RAM                        : 7
+ 251x16-bit single-port distributed Read Only RAM      : 1
+ 38400x8-bit dual-port block RAM                       : 1
+# Adders/Subtractors                                   : 64
+ 10-bit adder                                          : 1
+ 10-bit subtractor                                     : 2
+ 11-bit adder                                          : 6
+ 12-bit adder                                          : 3
+ 12-bit subtractor                                     : 10
+ 16-bit adder                                          : 5
+ 16-bit subtractor                                     : 1
+ 28-bit adder                                          : 1
+ 3-bit adder                                           : 1
+ 32-bit adder                                          : 7
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 6-bit adder                                           : 1
+ 7-bit adder                                           : 8
+ 8-bit adder                                           : 6
+ 8-bit subtractor                                      : 5
+ 9-bit adder                                           : 3
+ 9-bit subtractor                                      : 2
+# Counters                                             : 15
+ 11-bit up counter                                     : 4
+ 12-bit up counter                                     : 1
+ 16-bit up counter                                     : 1
+ 21-bit up counter                                     : 7
+ 32-bit up counter                                     : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 766
+ Flip-Flops                                            : 766
+# Comparators                                          : 45
+ 10-bit comparator greater                             : 3
+ 11-bit comparator equal                               : 12
+ 11-bit comparator lessequal                           : 8
+ 12-bit comparator greater                             : 3
+ 12-bit comparator lessequal                           : 6
+ 16-bit comparator greater                             : 3
+ 4-bit comparator lessequal                            : 1
+ 7-bit comparator lessequal                            : 6
+ 8-bit comparator greater                              : 1
+ 8-bit comparator lessequal                            : 1
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 380
+ 1-bit 2-to-1 multiplexer                              : 168
+ 1-bit 4-to-1 multiplexer                              : 15
+ 1-bit 9-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 12
+ 11-bit 2-to-1 multiplexer                             : 3
+ 12-bit 2-to-1 multiplexer                             : 3
+ 13-bit 2-to-1 multiplexer                             : 6
+ 15-bit 2-to-1 multiplexer                             : 8
+ 16-bit 2-to-1 multiplexer                             : 12
+ 2-bit 2-to-1 multiplexer                              : 6
+ 28-bit 2-to-1 multiplexer                             : 2
+ 3-bit 2-to-1 multiplexer                              : 2
+ 32-bit 2-to-1 multiplexer                             : 17
+ 4-bit 2-to-1 multiplexer                              : 51
+ 5-bit 2-to-1 multiplexer                              : 6
+ 5-bit 4-to-1 multiplexer                              : 2
+ 6-bit 2-to-1 multiplexer                              : 3
+ 6-bit 4-to-1 multiplexer                              : 1
+ 7-bit 2-to-1 multiplexer                              : 3
+ 8-bit 2-to-1 multiplexer                              : 57
+ 9-bit 2-to-1 multiplexer                              : 2
+# FSMs                                                 : 12
+# Xors                                                 : 43
+ 1-bit xor10                                           : 3
+ 1-bit xor11                                           : 3
+ 1-bit xor2                                            : 4
+ 1-bit xor3                                            : 3
+ 1-bit xor4                                            : 3
+ 1-bit xor5                                            : 3
+ 1-bit xor6                                            : 3
+ 1-bit xor7                                            : 3
+ 1-bit xor8                                            : 3
+ 1-bit xor9                                            : 3
+ 11-bit xor2                                           : 12
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1989 - Unit <camera_interface>: instances <m3>, <m4> of unit <debounce_explicit> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <camera_interface>: instances <m3>, <m5> of unit <debounce_explicit> are equivalent, second instance is removed
+WARNING:Xst:1989 - Unit <camera_interface>: instances <m3>, <m6> of unit <debounce_explicit> are equivalent, second instance is removed
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m0/FSM_0> on signal <state_q[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m0/FSM_1> on signal <sccb_state_q[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m0/m0/FSM_2> on signal <state_q[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 0101  | 0101
+ 0111  | 0111
+ 0110  | 0110
+ 1000  | 1000
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m0/m3/FSM_3> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <m3/FSM_3> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <m4/FSM_3> on signal <state_reg[1:2]> with gray encoding.
+Optimizing FSM <m5/FSM_3> on signal <state_reg[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+ 11    | 10
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m2/FSM_4> on signal <state_q[1:2]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 11
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <m_uart/FSM_5> on signal <st[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 010
+ 011   | 011
+ 100   | 100
+-------------------
+WARNING:Xst:1710 - FF/Latch <addr_q_1> (without init value) has a constant value of 0 in block <camera_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_q_3> (without init value) has a constant value of 0 in block <camera_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_q_5> (without init value) has a constant value of 0 in block <camera_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <addr_q_7> (without init value) has a constant value of 0 in block <camera_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <delay_q_27> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_0> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_1> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_2> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_3> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_4> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_5> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_6> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:2677 - Node <contrast_q_7> of sequential type is unconnected in block <camera_interface>.
+WARNING:Xst:1710 - FF/Latch <shreg_9> (without init value) has a constant value of 1 in block <uart_tx>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <m3/temp1_q_6> (without init value) has a constant value of 0 in block <sdram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m3/temp2_q_6> (without init value) has a constant value of 0 in block <sdram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m3/temp3_q_6> (without init value) has a constant value of 0 in block <sdram_interface>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_0> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_1> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_2> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_3> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_4> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_5> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_6> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_7> of sequential type is unconnected in block <sdram_interface>.
+WARNING:Xst:2677 - Node <m3/m6/data_count_r_8> of sequential type is unconnected in block <sdram_interface>.
+INFO:Xst:2261 - The FF/Latch <brightness_q_0> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_0> 
+INFO:Xst:2261 - The FF/Latch <brightness_q_1> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_1> 
+INFO:Xst:2261 - The FF/Latch <brightness_q_2> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_2> 
+INFO:Xst:2261 - The FF/Latch <brightness_q_3> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_3> 
+INFO:Xst:2261 - The FF/Latch <brightness_q_4> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_4> 
+INFO:Xst:2261 - The FF/Latch <brightness_q_5> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_5> 
+INFO:Xst:2261 - The FF/Latch <brightness_q_6> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_6> 
+INFO:Xst:2261 - The FF/Latch <brightness_q_7> in Unit <camera_interface> is equivalent to the following FF/Latch, which will be removed : <data_q_7> 
+INFO:Xst:2261 - The FF/Latch <addr_q_0> in Unit <camera_interface> is equivalent to the following 3 FFs/Latches, which will be removed : <addr_q_2> <addr_q_4> <addr_q_6> 
+INFO:Xst:2261 - The FF/Latch <frame_ready_vga> in Unit <sobel_frame_capture_bram_1bpp_lock_dualclk> is equivalent to the following FF/Latch, which will be removed : <locked_vga> 
+INFO:Xst:2261 - The FF/Latch <pay_i_15> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_15> 
+INFO:Xst:2261 - The FF/Latch <pay_i_14> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_14> 
+INFO:Xst:2261 - The FF/Latch <pay_i_13> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_13> 
+INFO:Xst:2261 - The FF/Latch <pay_i_12> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_12> 
+INFO:Xst:2261 - The FF/Latch <pay_i_11> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_11> 
+INFO:Xst:2261 - The FF/Latch <pay_i_10> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_10> 
+INFO:Xst:2261 - The FF/Latch <pay_i_9> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_9> 
+INFO:Xst:2261 - The FF/Latch <pay_i_8> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_8> 
+INFO:Xst:2261 - The FF/Latch <pay_i_7> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_7> 
+INFO:Xst:2261 - The FF/Latch <pay_i_6> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_6> 
+INFO:Xst:2261 - The FF/Latch <pay_i_5> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_5> 
+INFO:Xst:2261 - The FF/Latch <pay_i_4> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_4> 
+INFO:Xst:2261 - The FF/Latch <pay_i_3> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_3> 
+INFO:Xst:2261 - The FF/Latch <pay_i_2> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_2> 
+INFO:Xst:2261 - The FF/Latch <pay_i_1> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_1> 
+INFO:Xst:2261 - The FF/Latch <pay_i_0> in Unit <uart_frame_streamer_1bpp> is equivalent to the following FF/Latch, which will be removed : <rd_addr_0> 
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_7> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_6> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_5> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_4> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_3> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_2> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_1> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m0/rd_data_q_0> of sequential type is unconnected in block <top_module>.
+
+Optimizing unit <top_module> ...
+WARNING:Xst:1710 - FF/Latch <m1/m3/temp1_q_5> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m1/m3/temp2_q_5> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m1/m3/temp3_q_5> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <asyn_fifo_1> ...
+
+Optimizing unit <debounce_explicit> ...
+
+Optimizing unit <vga_interface> ...
+
+Optimizing unit <vga_core> ...
+
+Optimizing unit <sobel_frame_capture_bram_1bpp_lock_dualclk> ...
+
+Optimizing unit <uart_frame_streamer_1bpp> ...
+
+Optimizing unit <uart_tx> ...
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_9> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_8> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_7> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_6> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_5> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_4> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_3> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_2> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_1> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_r_0> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/data_count_w_0> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_10> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_9> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_8> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_7> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_6> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_5> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_4> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_3> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_2> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_1> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m1/m2/r_ptr_sync_0> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_9> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_8> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_7> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_6> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_5> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_4> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_3> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_2> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_1> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m0/m2/data_count_w_0> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:2677 - Node <m_uart/u_tx/tx_done> of sequential type is unconnected in block <top_module>.
+WARNING:Xst:1710 - FF/Latch <m_uart/hdr_i_15> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_14> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_13> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_12> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_11> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_10> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_9> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_8> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_7> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_6> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <m_uart/hdr_i_5> (without init value) has a constant value of 0 in block <top_module>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <m0/led_q_0> in Unit <top_module> is equivalent to the following FF/Latch, which will be removed : <m0/led_q_3> 
+INFO:Xst:2261 - The FF/Latch <m0/led_q_1> in Unit <top_module> is equivalent to the following FF/Latch, which will be removed : <m0/led_q_2> 
+INFO:Xst:3203 - The FF/Latch <m_cap/bram_empty_vga> in Unit <top_module> is the opposite to the following FF/Latch, which will be removed : <m_cap/frame_ready_vga> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block top_module, actual ratio is 38.
+
+Final Macro Processing ...
+
+Processing Unit <top_module> :
+	Found 2-bit shift register for signal <m1/m3/m6/r_grey_sync_10>.
+	Found 2-bit shift register for signal <m1/m3/m6/w_grey_sync_10>.
+	Found 2-bit shift register for signal <m1/m3/m6/w_grey_sync_2>.
+	Found 2-bit shift register for signal <m1/m3/m6/w_grey_sync_0>.
+	Found 2-bit shift register for signal <m1/m2/w_grey_sync_10>.
+	Found 2-bit shift register for signal <m1/m2/w_grey_sync_5>.
+	Found 2-bit shift register for signal <m1/m2/w_grey_sync_4>.
+	Found 2-bit shift register for signal <m1/m2/r_grey_sync_10>.
+	Found 2-bit shift register for signal <m1/m2/r_grey_sync_5>.
+	Found 2-bit shift register for signal <m1/m2/r_grey_sync_4>.
+	Found 2-bit shift register for signal <m0/m2/w_grey_sync_10>.
+	Found 2-bit shift register for signal <m0/m2/w_grey_sync_6>.
+	Found 2-bit shift register for signal <m0/m2/w_grey_sync_5>.
+	Found 2-bit shift register for signal <m0/m2/r_grey_sync_10>.
+	Found 2-bit shift register for signal <m0/m2/r_grey_sync_5>.
+	Found 2-bit shift register for signal <m0/m2/r_grey_sync_4>.
+Unit <top_module> processed.
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 844
+ Flip-Flops                                            : 844
+# Shift Registers                                      : 16
+ 2-bit shift register                                  : 16
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top_module.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2750
+#      GND                         : 1
+#      INV                         : 48
+#      LUT1                        : 255
+#      LUT2                        : 227
+#      LUT3                        : 249
+#      LUT4                        : 268
+#      LUT5                        : 260
+#      LUT6                        : 482
+#      MUXCY                       : 470
+#      MUXF7                       : 24
+#      VCC                         : 1
+#      XORCY                       : 465
+# FlipFlops/Latches                : 862
+#      FD                          : 100
+#      FDC                         : 173
+#      FDCE                        : 491
+#      FDE                         : 64
+#      FDP                         : 8
+#      FDPE                        : 13
+#      FDR                         : 11
+#      ODDR2                       : 2
+# RAMS                             : 29
+#      RAMB16BWER                  : 22
+#      RAMB8BWER                   : 7
+# Shift Registers                  : 16
+#      SRLC16E                     : 16
+# Clock Buffers                    : 7
+#      BUFG                        : 7
+# IO Buffers                       : 83
+#      IBUF                        : 15
+#      IBUFG                       : 1
+#      IOBUF                       : 17
+#      OBUF                        : 50
+# DCMs                             : 3
+#      DCM_SP                      : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             862  out of  11440     7%  
+ Number of Slice LUTs:                 1805  out of   5720    31%  
+    Number used as Logic:              1789  out of   5720    31%  
+    Number used as Memory:               16  out of   1440     1%  
+       Number used as SRL:               16
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1967
+   Number with an unused Flip Flop:    1105  out of   1967    56%  
+   Number with an unused LUT:           162  out of   1967     8%  
+   Number of fully used LUT-FF pairs:   700  out of   1967    35%  
+   Number of unique control sets:        45
+
+IO Utilization: 
+ Number of IOs:                          84
+ Number of bonded IOBs:                  83  out of    186    44%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               26  out of     32    81%  
+    Number using Block RAM only:         26
+ Number of BUFG/BUFGCTRLs:                7  out of     16    43%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | IBUFG+BUFG             | 230   |
+clk                                | DCM_SP:CLKFX           | 553   |
+clk                                | DCM_SP:CLKDV           | 147   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 25.717ns (Maximum Frequency: 38.885MHz)
+   Minimum input arrival time before clock: 7.040ns
+   Maximum output required time after clock: 10.395ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 25.717ns (frequency: 38.885MHz)
+  Total number of paths / destination ports: 71717 / 2340
+-------------------------------------------------------------------------
+Delay:               8.572ns (Levels of Logic = 10)
+  Source:            m1/m3/m3/Mram_ram (RAM)
+  Destination:       m1/m3/m6/m0/Mram_ram (RAM)
+  Source Clock:      clk rising 3.0X
+  Destination Clock: clk rising 3.0X
+
+  Data Path: m1/m3/m3/Mram_ram to m1/m3/m6/m0/Mram_ram
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKBRDCLK->DOBDO0    2   1.850   0.845  m1/m3/m3/Mram_ram (m1/m3/dout_4<0>)
+     LUT3:I0->O            1   0.205   0.580  m1/m3/Madd_dout_4[7]_dout_6[7]_add_49_OUT (m1/m3/Madd_dout_4[7]_dout_6[7]_add_49_OUT)
+     LUT4:I3->O            1   0.205   0.000  m1/m3/Madd_dout_4[7]_dout_6[7]_add_49_OUT_lut<0>1 (m1/m3/Madd_dout_4[7]_dout_6[7]_add_49_OUT_lut<0>1)
+     MUXCY:S->O            1   0.172   0.000  m1/m3/Madd_dout_4[7]_dout_6[7]_add_49_OUT_cy<0>_0 (m1/m3/Madd_dout_4[7]_dout_6[7]_add_49_OUT_cy<0>1)
+     XORCY:CI->O           6   0.180   0.745  m1/m3/Madd_dout_4[7]_dout_6[7]_add_49_OUT_xor<0>_1 (m1/m3/dout_4[7]_dout_6[7]_add_49_OUT<2>)
+     LUT3:I2->O            1   0.205   0.580  m1/m3/Mmux_n0178511_SW1 (N274)
+     LUT6:I5->O            1   0.205   0.580  m1/m3/Mmux_n017871 (m1/m3/n0178<6>)
+     LUT6:I5->O            1   0.205   0.000  m1/m3/Madd_dout_4[7]_GND_32_o_add_54_OUT_lut<6> (m1/m3/Madd_dout_4[7]_GND_32_o_add_54_OUT_lut<6>)
+     MUXCY:S->O            0   0.172   0.000  m1/m3/Madd_dout_4[7]_GND_32_o_add_54_OUT_cy<6> (m1/m3/Madd_dout_4[7]_GND_32_o_add_54_OUT_cy<6>)
+     XORCY:CI->O           1   0.180   0.580  m1/m3/Madd_dout_4[7]_GND_32_o_add_54_OUT_xor<7> (m1/m3/dout_4[7]_GND_32_o_add_54_OUT<7>)
+     LUT6:I5->O            1   0.205   0.579  m1/m3/Mmux_data_write81 (m1/m3/data_write<7>)
+     RAMB8BWER:DIADI7          0.300          m1/m3/m6/m0/Mram_ram
+    ----------------------------------------
+    Total                      8.572ns (4.084ns logic, 4.488ns route)
+                                       (47.6% logic, 52.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1768 / 1031
+-------------------------------------------------------------------------
+Offset:              7.040ns (Levels of Logic = 7)
+  Source:            cmos_sda (PAD)
+  Destination:       m0/m0/start_q (FF)
+  Destination Clock: clk rising 3.0X
+
+  Data Path: cmos_sda to m0/m0/start_q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           3   1.222   1.015  cmos_sda_IOBUF (N192)
+     LUT6:I0->O            3   0.203   0.651  m0/ack[1]_PWR_3_o_equal_28_o<1>_2 (m0/ack[1]_PWR_3_o_equal_28_o<1>1)
+     LUT4:I3->O            6   0.205   0.745  m0/Mmux_wr_data1431 (m0/Mmux_wr_data143)
+     LUT6:I5->O            3   0.205   0.651  m0/Mmux_wr_data101 (m0/Mmux_wr_data101)
+     LUT6:I5->O            2   0.205   0.617  m0/Mmux_wr_data2 (m0/wr_data<0>)
+     LUT6:I5->O            1   0.205   0.808  m0/m0/Mmux__n03471 (m0/m0/_n0347)
+     LUT5:I2->O            1   0.205   0.000  m0/m0/start_q_dpot (m0/m0/start_q_dpot)
+     FDCE:D                    0.102          m0/m0/start_q
+    ----------------------------------------
+    Total                      7.040ns (2.552ns logic, 4.488ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1215 / 60
+-------------------------------------------------------------------------
+Offset:              10.395ns (Levels of Logic = 6)
+  Source:            m1/m2/m0/Mram_ram (RAM)
+  Destination:       vga_out_r<4> (PAD)
+  Source Clock:      clk rising 0.5X
+
+  Data Path: m1/m2/m0/Mram_ram to vga_out_r<4>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB2    2   1.850   0.981  m1/m2/m0/Mram_ram (din<2>)
+     LUT6:I0->O            1   0.203   0.808  m2/edge_bit3 (m2/edge_bit1)
+     LUT3:I0->O            1   0.205   0.580  m2/edge_bit11 (m2/edge_bit11)
+     LUT5:I4->O            1   0.205   0.808  m2/edge_bit12 (m2/edge_bit2)
+     LUT5:I2->O           20   0.205   1.197  m2/edge_bit21 (sobel_stream_pixel_vga<0>)
+     LUT4:I2->O            1   0.203   0.579  m2/Mmux_vga_out_b11 (vga_out_b_0_OBUF)
+     OBUF:I->O                 2.571          vga_out_b_0_OBUF (vga_out_b<0>)
+    ----------------------------------------
+    Total                     10.395ns (5.442ns logic, 4.953ns route)
+                                       (52.4% logic, 47.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.572|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 16.00 secs
+Total CPU time to Xst completion: 15.54 secs
+ 
+--> 
+
+Total memory usage is 4638232 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  161 (   0 filtered)
+Number of infos    :   65 (   0 filtered)
+

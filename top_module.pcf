@@ -1,0 +1,558 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Dec 13 04:47:30 2025
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "T8" LEVEL 1;
+PIN clk_pin<0> = BEL "clk" PINNAME PAD;
+PIN "clk_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "sdram_cs_n" LOCATE = SITE "G1" LEVEL 1;
+COMP "sdram_we_n" LOCATE = SITE "E1" LEVEL 1;
+COMP "vga_out_hs" LOCATE = SITE "M14" LEVEL 1;
+COMP "vga_out_vs" LOCATE = SITE "L13" LEVEL 1;
+COMP "cmos_href" LOCATE = SITE "K14" LEVEL 1;
+COMP "sdram_ba<0>" LOCATE = SITE "G6" LEVEL 1;
+COMP "sdram_ba<1>" LOCATE = SITE "J6" LEVEL 1;
+COMP "cmos_pclk" LOCATE = SITE "J12" LEVEL 1;
+COMP "cmos_xclk" LOCATE = SITE "J14" LEVEL 1;
+COMP "cmos_pwdn" LOCATE = SITE "F14" LEVEL 1;
+COMP "sdram_dq<0>" LOCATE = SITE "A3" LEVEL 1;
+COMP "sdram_dq<1>" LOCATE = SITE "B3" LEVEL 1;
+COMP "sdram_dq<2>" LOCATE = SITE "A2" LEVEL 1;
+COMP "sdram_dq<3>" LOCATE = SITE "B2" LEVEL 1;
+COMP "sdram_dq<4>" LOCATE = SITE "B1" LEVEL 1;
+COMP "sdram_dq<5>" LOCATE = SITE "C2" LEVEL 1;
+COMP "sdram_dq<6>" LOCATE = SITE "C1" LEVEL 1;
+COMP "sdram_dq<7>" LOCATE = SITE "D1" LEVEL 1;
+COMP "sdram_dq<8>" LOCATE = SITE "H5" LEVEL 1;
+COMP "sdram_dq<9>" LOCATE = SITE "G5" LEVEL 1;
+COMP "rst_n" LOCATE = SITE "L3" LEVEL 1;
+COMP "sdram_cas_n" LOCATE = SITE "F2" LEVEL 1;
+COMP "sdram_ras_n" LOCATE = SITE "F1" LEVEL 1;
+COMP "sdram_addr<0>" LOCATE = SITE "J3" LEVEL 1;
+COMP "sdram_addr<1>" LOCATE = SITE "J4" LEVEL 1;
+COMP "sdram_addr<2>" LOCATE = SITE "K3" LEVEL 1;
+COMP "sdram_addr<3>" LOCATE = SITE "K5" LEVEL 1;
+COMP "sdram_addr<4>" LOCATE = SITE "P1" LEVEL 1;
+COMP "sdram_addr<5>" LOCATE = SITE "N1" LEVEL 1;
+COMP "sdram_addr<6>" LOCATE = SITE "M2" LEVEL 1;
+COMP "sdram_addr<7>" LOCATE = SITE "M1" LEVEL 1;
+COMP "sdram_addr<8>" LOCATE = SITE "L1" LEVEL 1;
+COMP "sdram_addr<9>" LOCATE = SITE "K2" LEVEL 1;
+COMP "sdram_cke" LOCATE = SITE "H2" LEVEL 1;
+COMP "sdram_clk" LOCATE = SITE "H4" LEVEL 1;
+COMP "cmos_db<0>" LOCATE = SITE "G14" LEVEL 1;
+COMP "cmos_db<1>" LOCATE = SITE "F13" LEVEL 1;
+COMP "cmos_db<2>" LOCATE = SITE "H14" LEVEL 1;
+COMP "cmos_db<3>" LOCATE = SITE "F12" LEVEL 1;
+COMP "cmos_db<4>" LOCATE = SITE "G12" LEVEL 1;
+COMP "cmos_db<5>" LOCATE = SITE "H13" LEVEL 1;
+COMP "cmos_db<6>" LOCATE = SITE "H11" LEVEL 1;
+COMP "cmos_db<7>" LOCATE = SITE "G11" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "P4" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "N5" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "P5" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "M6" LEVEL 1;
+COMP "key<0>" LOCATE = SITE "C3" LEVEL 1;
+COMP "key<1>" LOCATE = SITE "D3" LEVEL 1;
+COMP "key<2>" LOCATE = SITE "E4" LEVEL 1;
+COMP "key<3>" LOCATE = SITE "E3" LEVEL 1;
+COMP "cmos_sda" LOCATE = SITE "L14" LEVEL 1;
+COMP "cmos_scl" LOCATE = SITE "K12" LEVEL 1;
+COMP "uart_tx_pin" LOCATE = SITE "D12" LEVEL 1;
+COMP "cmos_rst_n" LOCATE = SITE "E12" LEVEL 1;
+COMP "sdram_dq<10>" LOCATE = SITE "H3" LEVEL 1;
+COMP "sdram_dq<11>" LOCATE = SITE "F6" LEVEL 1;
+COMP "sdram_dq<12>" LOCATE = SITE "G3" LEVEL 1;
+COMP "sdram_dq<13>" LOCATE = SITE "F5" LEVEL 1;
+COMP "sdram_dq<14>" LOCATE = SITE "F3" LEVEL 1;
+COMP "sdram_dq<15>" LOCATE = SITE "F4" LEVEL 1;
+COMP "cmos_vsync" LOCATE = SITE "J13" LEVEL 1;
+COMP "sdram_dqm<0>" LOCATE = SITE "E2" LEVEL 1;
+COMP "sdram_dqm<1>" LOCATE = SITE "H1" LEVEL 1;
+COMP "sdram_addr<10>" LOCATE = SITE "K6" LEVEL 1;
+COMP "sdram_addr<11>" LOCATE = SITE "K1" LEVEL 1;
+COMP "sdram_addr<12>" LOCATE = SITE "J1" LEVEL 1;
+COMP "vga_out_b<0>" LOCATE = SITE "P7" LEVEL 1;
+COMP "vga_out_b<1>" LOCATE = SITE "M7" LEVEL 1;
+COMP "vga_out_b<2>" LOCATE = SITE "P8" LEVEL 1;
+COMP "vga_out_b<3>" LOCATE = SITE "N8" LEVEL 1;
+COMP "vga_out_b<4>" LOCATE = SITE "L7" LEVEL 1;
+COMP "vga_out_g<0>" LOCATE = SITE "M9" LEVEL 1;
+COMP "vga_out_g<1>" LOCATE = SITE "N9" LEVEL 1;
+COMP "vga_out_g<2>" LOCATE = SITE "P9" LEVEL 1;
+COMP "vga_out_g<3>" LOCATE = SITE "L10" LEVEL 1;
+COMP "vga_out_g<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "vga_out_g<5>" LOCATE = SITE "P11" LEVEL 1;
+COMP "vga_out_r<0>" LOCATE = SITE "M11" LEVEL 1;
+COMP "vga_out_r<1>" LOCATE = SITE "M12" LEVEL 1;
+COMP "vga_out_r<2>" LOCATE = SITE "L12" LEVEL 1;
+COMP "vga_out_r<3>" LOCATE = SITE "N14" LEVEL 1;
+COMP "vga_out_r<4>" LOCATE = SITE "M13" LEVEL 1;
+PIN m0/m1/clkout1_buf_pin<1> = BEL "m0/m1/clkout1_buf" PINNAME O;
+PIN "m0/m1/clkout1_buf_pin<1>" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN m_cap/Mram_ram20_pins<27> = BEL "m_cap/Mram_ram20" PINNAME CLKB;
+PIN m_cap/Mram_ram19_pins<27> = BEL "m_cap/Mram_ram19" PINNAME CLKB;
+PIN m_cap/Mram_ram18_pins<27> = BEL "m_cap/Mram_ram18" PINNAME CLKB;
+PIN m_cap/Mram_ram17_pins<27> = BEL "m_cap/Mram_ram17" PINNAME CLKB;
+PIN m_cap/Mram_ram16_pins<29> = BEL "m_cap/Mram_ram16" PINNAME CLKB;
+PIN m_cap/Mram_ram15_pins<29> = BEL "m_cap/Mram_ram15" PINNAME CLKB;
+PIN m_cap/Mram_ram13_pins<29> = BEL "m_cap/Mram_ram13" PINNAME CLKB;
+PIN m_cap/Mram_ram12_pins<29> = BEL "m_cap/Mram_ram12" PINNAME CLKB;
+PIN m_cap/Mram_ram14_pins<29> = BEL "m_cap/Mram_ram14" PINNAME CLKB;
+PIN m_cap/Mram_ram11_pins<29> = BEL "m_cap/Mram_ram11" PINNAME CLKB;
+PIN m_cap/Mram_ram10_pins<29> = BEL "m_cap/Mram_ram10" PINNAME CLKB;
+PIN m_cap/Mram_ram9_pins<29> = BEL "m_cap/Mram_ram9" PINNAME CLKB;
+PIN m_cap/Mram_ram8_pins<29> = BEL "m_cap/Mram_ram8" PINNAME CLKB;
+PIN m_cap/Mram_ram7_pins<29> = BEL "m_cap/Mram_ram7" PINNAME CLKB;
+PIN m_cap/Mram_ram6_pins<29> = BEL "m_cap/Mram_ram6" PINNAME CLKB;
+PIN m_cap/Mram_ram5_pins<29> = BEL "m_cap/Mram_ram5" PINNAME CLKB;
+PIN m_cap/Mram_ram4_pins<29> = BEL "m_cap/Mram_ram4" PINNAME CLKB;
+PIN m_cap/Mram_ram3_pins<29> = BEL "m_cap/Mram_ram3" PINNAME CLKB;
+PIN m_cap/Mram_ram2_pins<29> = BEL "m_cap/Mram_ram2" PINNAME CLKB;
+PIN m_cap/Mram_ram1_pins<29> = BEL "m_cap/Mram_ram1" PINNAME CLKB;
+PIN m0/m1/dcm_sp_inst_pins<3> = BEL "m0/m1/dcm_sp_inst" PINNAME CLKIN;
+PIN m2/m1/dcm_sp_inst_pins<3> = BEL "m2/m1/dcm_sp_inst" PINNAME CLKIN;
+PIN m6/dcm_sp_inst_pins<3> = BEL "m6/dcm_sp_inst" PINNAME CLKIN;
+TIMEGRP sys_clk_pin = BEL "threshold_0" BEL "threshold_1" BEL "threshold_2"
+        BEL "threshold_3" BEL "threshold_4" BEL "threshold_5" BEL
+        "threshold_6" BEL "threshold_7" BEL "m5/state_reg_FSM_FFd1" BEL
+        "m5/state_reg_FSM_FFd2" BEL "m5/timer_reg_20" BEL "m5/timer_reg_19"
+        BEL "m5/timer_reg_18" BEL "m5/timer_reg_17" BEL "m5/timer_reg_16" BEL
+        "m5/timer_reg_15" BEL "m5/timer_reg_14" BEL "m5/timer_reg_13" BEL
+        "m5/timer_reg_12" BEL "m5/timer_reg_11" BEL "m5/timer_reg_10" BEL
+        "m5/timer_reg_9" BEL "m5/timer_reg_8" BEL "m5/timer_reg_7" BEL
+        "m5/timer_reg_6" BEL "m5/timer_reg_5" BEL "m5/timer_reg_4" BEL
+        "m5/timer_reg_3" BEL "m5/timer_reg_2" BEL "m5/timer_reg_1" BEL
+        "m5/timer_reg_0" BEL "m4/state_reg_FSM_FFd1" BEL
+        "m4/state_reg_FSM_FFd2" BEL "m4/timer_reg_20" BEL "m4/timer_reg_19"
+        BEL "m4/timer_reg_18" BEL "m4/timer_reg_17" BEL "m4/timer_reg_16" BEL
+        "m4/timer_reg_15" BEL "m4/timer_reg_14" BEL "m4/timer_reg_13" BEL
+        "m4/timer_reg_12" BEL "m4/timer_reg_11" BEL "m4/timer_reg_10" BEL
+        "m4/timer_reg_9" BEL "m4/timer_reg_8" BEL "m4/timer_reg_7" BEL
+        "m4/timer_reg_6" BEL "m4/timer_reg_5" BEL "m4/timer_reg_4" BEL
+        "m4/timer_reg_3" BEL "m4/timer_reg_2" BEL "m4/timer_reg_1" BEL
+        "m4/timer_reg_0" BEL "m3/state_reg_FSM_FFd1" BEL
+        "m3/state_reg_FSM_FFd2" BEL "m3/timer_reg_20" BEL "m3/timer_reg_19"
+        BEL "m3/timer_reg_18" BEL "m3/timer_reg_17" BEL "m3/timer_reg_16" BEL
+        "m3/timer_reg_15" BEL "m3/timer_reg_14" BEL "m3/timer_reg_13" BEL
+        "m3/timer_reg_12" BEL "m3/timer_reg_11" BEL "m3/timer_reg_10" BEL
+        "m3/timer_reg_9" BEL "m3/timer_reg_8" BEL "m3/timer_reg_7" BEL
+        "m3/timer_reg_6" BEL "m3/timer_reg_5" BEL "m3/timer_reg_4" BEL
+        "m3/timer_reg_3" BEL "m3/timer_reg_2" BEL "m3/timer_reg_1" BEL
+        "m3/timer_reg_0" BEL "m_cap/inst_LPM_FF_0" BEL "m_cap/inst_LPM_FF_1"
+        BEL "m_uart/st_FSM_FFd1" BEL "m_uart/st_FSM_FFd2" BEL "m_uart/hdr_i_4"
+        BEL "m_uart/hdr_i_3" BEL "m_uart/hdr_i_2" BEL "m_uart/hdr_i_1" BEL
+        "m_uart/hdr_i_0" BEL "m_uart/st_FSM_FFd3" BEL "m_uart/pay_i_31" BEL
+        "m_uart/pay_i_30" BEL "m_uart/pay_i_29" BEL "m_uart/pay_i_28" BEL
+        "m_uart/pay_i_27" BEL "m_uart/pay_i_26" BEL "m_uart/pay_i_25" BEL
+        "m_uart/pay_i_24" BEL "m_uart/pay_i_23" BEL "m_uart/pay_i_22" BEL
+        "m_uart/pay_i_21" BEL "m_uart/pay_i_20" BEL "m_uart/pay_i_19" BEL
+        "m_uart/pay_i_18" BEL "m_uart/pay_i_17" BEL "m_uart/pay_i_16" BEL
+        "m_uart/pay_i_15" BEL "m_uart/pay_i_14" BEL "m_uart/pay_i_13" BEL
+        "m_uart/pay_i_12" BEL "m_uart/pay_i_11" BEL "m_uart/pay_i_10" BEL
+        "m_uart/pay_i_9" BEL "m_uart/pay_i_8" BEL "m_uart/pay_i_7" BEL
+        "m_uart/pay_i_6" BEL "m_uart/pay_i_5" BEL "m_uart/pay_i_4" BEL
+        "m_uart/pay_i_3" BEL "m_uart/pay_i_2" BEL "m_uart/pay_i_1" BEL
+        "m_uart/pay_i_0" BEL "m_uart/tx_start" BEL "m_uart/tx_data_7" BEL
+        "m_uart/tx_data_6" BEL "m_uart/tx_data_5" BEL "m_uart/tx_data_4" BEL
+        "m_uart/tx_data_3" BEL "m_uart/tx_data_2" BEL "m_uart/tx_data_1" BEL
+        "m_uart/tx_data_0" BEL "m_uart/fr_sync_1" BEL "m_uart/fr_sync_0" BEL
+        "m_uart/frame_id_lat_31" BEL "m_uart/frame_id_lat_30" BEL
+        "m_uart/frame_id_lat_29" BEL "m_uart/frame_id_lat_28" BEL
+        "m_uart/frame_id_lat_27" BEL "m_uart/frame_id_lat_26" BEL
+        "m_uart/frame_id_lat_25" BEL "m_uart/frame_id_lat_24" BEL
+        "m_uart/frame_id_lat_23" BEL "m_uart/frame_id_lat_22" BEL
+        "m_uart/frame_id_lat_21" BEL "m_uart/frame_id_lat_20" BEL
+        "m_uart/frame_id_lat_19" BEL "m_uart/frame_id_lat_18" BEL
+        "m_uart/frame_id_lat_17" BEL "m_uart/frame_id_lat_16" BEL
+        "m_uart/frame_id_lat_15" BEL "m_uart/frame_id_lat_14" BEL
+        "m_uart/frame_id_lat_13" BEL "m_uart/frame_id_lat_12" BEL
+        "m_uart/frame_id_lat_11" BEL "m_uart/frame_id_lat_10" BEL
+        "m_uart/frame_id_lat_9" BEL "m_uart/frame_id_lat_8" BEL
+        "m_uart/frame_id_lat_7" BEL "m_uart/frame_id_lat_6" BEL
+        "m_uart/frame_id_lat_5" BEL "m_uart/frame_id_lat_4" BEL
+        "m_uart/frame_id_lat_3" BEL "m_uart/frame_id_lat_2" BEL
+        "m_uart/frame_id_lat_1" BEL "m_uart/frame_id_lat_0" BEL
+        "m_uart/u_tx/tx_line" BEL "m_uart/u_tx/div_cnt_31" BEL
+        "m_uart/u_tx/div_cnt_30" BEL "m_uart/u_tx/div_cnt_29" BEL
+        "m_uart/u_tx/div_cnt_28" BEL "m_uart/u_tx/div_cnt_27" BEL
+        "m_uart/u_tx/div_cnt_26" BEL "m_uart/u_tx/div_cnt_25" BEL
+        "m_uart/u_tx/div_cnt_24" BEL "m_uart/u_tx/div_cnt_23" BEL
+        "m_uart/u_tx/div_cnt_22" BEL "m_uart/u_tx/div_cnt_21" BEL
+        "m_uart/u_tx/div_cnt_20" BEL "m_uart/u_tx/div_cnt_19" BEL
+        "m_uart/u_tx/div_cnt_18" BEL "m_uart/u_tx/div_cnt_17" BEL
+        "m_uart/u_tx/div_cnt_16" BEL "m_uart/u_tx/div_cnt_15" BEL
+        "m_uart/u_tx/div_cnt_14" BEL "m_uart/u_tx/div_cnt_13" BEL
+        "m_uart/u_tx/div_cnt_12" BEL "m_uart/u_tx/div_cnt_11" BEL
+        "m_uart/u_tx/div_cnt_10" BEL "m_uart/u_tx/div_cnt_9" BEL
+        "m_uart/u_tx/div_cnt_8" BEL "m_uart/u_tx/div_cnt_7" BEL
+        "m_uart/u_tx/div_cnt_6" BEL "m_uart/u_tx/div_cnt_5" BEL
+        "m_uart/u_tx/div_cnt_4" BEL "m_uart/u_tx/div_cnt_3" BEL
+        "m_uart/u_tx/div_cnt_2" BEL "m_uart/u_tx/div_cnt_1" BEL
+        "m_uart/u_tx/div_cnt_0" BEL "m_uart/u_tx/bit_pos_3" BEL
+        "m_uart/u_tx/bit_pos_2" BEL "m_uart/u_tx/bit_pos_1" BEL
+        "m_uart/u_tx/bit_pos_0" BEL "m_uart/u_tx/shreg_8" BEL
+        "m_uart/u_tx/shreg_7" BEL "m_uart/u_tx/shreg_6" BEL
+        "m_uart/u_tx/shreg_5" BEL "m_uart/u_tx/shreg_4" BEL
+        "m_uart/u_tx/shreg_3" BEL "m_uart/u_tx/shreg_2" BEL
+        "m_uart/u_tx/shreg_1" BEL "sobel" BEL "m_uart/consume_toggle_uart" BEL
+        "m_uart/u_tx/tx_busy" BEL "clk_IBUFG_BUFG" PIN
+        "m_cap/Mram_ram20_pins<27>" PIN "m_cap/Mram_ram19_pins<27>" PIN
+        "m_cap/Mram_ram18_pins<27>" PIN "m_cap/Mram_ram17_pins<27>" PIN
+        "m_cap/Mram_ram16_pins<29>" PIN "m_cap/Mram_ram15_pins<29>" PIN
+        "m_cap/Mram_ram13_pins<29>" PIN "m_cap/Mram_ram12_pins<29>" PIN
+        "m_cap/Mram_ram14_pins<29>" PIN "m_cap/Mram_ram11_pins<29>" PIN
+        "m_cap/Mram_ram10_pins<29>" PIN "m_cap/Mram_ram9_pins<29>" PIN
+        "m_cap/Mram_ram8_pins<29>" PIN "m_cap/Mram_ram7_pins<29>" PIN
+        "m_cap/Mram_ram6_pins<29>" PIN "m_cap/Mram_ram5_pins<29>" PIN
+        "m_cap/Mram_ram4_pins<29>" PIN "m_cap/Mram_ram3_pins<29>" PIN
+        "m_cap/Mram_ram2_pins<29>" PIN "m_cap/Mram_ram1_pins<29>" PIN
+        "m0/m1/dcm_sp_inst_pins<3>" PIN "m2/m1/dcm_sp_inst_pins<3>" PIN
+        "m6/dcm_sp_inst_pins<3>";
+PIN m1/m3/m6/m0/Mram_ram_pins<20> = BEL "m1/m3/m6/m0/Mram_ram" PINNAME
+        CLKAWRCLK;
+PIN m1/m3/m6/m0/Mram_ram_pins<21> = BEL "m1/m3/m6/m0/Mram_ram" PINNAME
+        CLKBRDCLK;
+PIN m1/m3/m1/Mram_ram_pins<20> = BEL "m1/m3/m1/Mram_ram" PINNAME CLKAWRCLK;
+PIN m1/m3/m1/Mram_ram_pins<21> = BEL "m1/m3/m1/Mram_ram" PINNAME CLKBRDCLK;
+PIN m1/m3/m0/Mram_ram_pins<20> = BEL "m1/m3/m0/Mram_ram" PINNAME CLKAWRCLK;
+PIN m1/m3/m0/Mram_ram_pins<21> = BEL "m1/m3/m0/Mram_ram" PINNAME CLKBRDCLK;
+PIN m1/m3/m4/Mram_ram_pins<20> = BEL "m1/m3/m4/Mram_ram" PINNAME CLKAWRCLK;
+PIN m1/m3/m4/Mram_ram_pins<21> = BEL "m1/m3/m4/Mram_ram" PINNAME CLKBRDCLK;
+PIN m1/m3/m3/Mram_ram_pins<20> = BEL "m1/m3/m3/Mram_ram" PINNAME CLKAWRCLK;
+PIN m1/m3/m3/Mram_ram_pins<21> = BEL "m1/m3/m3/Mram_ram" PINNAME CLKBRDCLK;
+PIN m1/m3/m2/Mram_ram_pins<20> = BEL "m1/m3/m2/Mram_ram" PINNAME CLKAWRCLK;
+PIN m1/m3/m2/Mram_ram_pins<21> = BEL "m1/m3/m2/Mram_ram" PINNAME CLKBRDCLK;
+PIN m1/m3/m5/Mram_ram_pins<20> = BEL "m1/m3/m5/Mram_ram" PINNAME CLKAWRCLK;
+PIN m1/m3/m5/Mram_ram_pins<21> = BEL "m1/m3/m5/Mram_ram" PINNAME CLKBRDCLK;
+PIN m1/m2/m0/Mram_ram_pins<20> = BEL "m1/m2/m0/Mram_ram" PINNAME CLKA;
+PIN m0/m2/m0/Mram_ram_pins<20> = BEL "m0/m2/m0/Mram_ram" PINNAME CLKA;
+PIN m0/m2/m0/Mram_ram_pins<21> = BEL "m0/m2/m0/Mram_ram" PINNAME CLKB;
+PIN oddr2_primitive_pins<1> = BEL "oddr2_primitive" PINNAME CK0;
+PIN oddr2_primitive_pins<2> = BEL "oddr2_primitive" PINNAME CK1;
+TIMEGRP m6_clkfx = BEL "m6/clkout1_buf" BEL "m0/sccb_state_q_FSM_FFd2" BEL
+        "m0/sccb_state_q_FSM_FFd3" BEL "m0/sccb_state_q_FSM_FFd1" BEL
+        "m0/state_q_FSM_FFd2" BEL "m0/state_q_FSM_FFd3" BEL
+        "m0/state_q_FSM_FFd1" BEL "m0/message_index_q_7" BEL
+        "m0/message_index_q_6" BEL "m0/message_index_q_5" BEL
+        "m0/message_index_q_4" BEL "m0/message_index_q_3" BEL
+        "m0/message_index_q_2" BEL "m0/message_index_q_1" BEL
+        "m0/message_index_q_0" BEL "m0/state_q_FSM_FFd4" BEL "m0/led_q_1" BEL
+        "m0/led_q_0" BEL "m0/addr_q_0" BEL "m0/brightness_q_7" BEL
+        "m0/brightness_q_6" BEL "m0/brightness_q_5" BEL "m0/brightness_q_4"
+        BEL "m0/brightness_q_3" BEL "m0/brightness_q_2" BEL
+        "m0/brightness_q_1" BEL "m0/brightness_q_0" BEL "m0/pixel_q_15" BEL
+        "m0/pixel_q_14" BEL "m0/pixel_q_13" BEL "m0/pixel_q_12" BEL
+        "m0/pixel_q_11" BEL "m0/pixel_q_10" BEL "m0/pixel_q_9" BEL
+        "m0/pixel_q_8" BEL "m0/pixel_q_7" BEL "m0/pixel_q_6" BEL
+        "m0/pixel_q_5" BEL "m0/pixel_q_4" BEL "m0/pixel_q_3" BEL
+        "m0/pixel_q_2" BEL "m0/pixel_q_1" BEL "m0/pixel_q_0" BEL
+        "m0/start_delay_q" BEL "m0/delay_q_26" BEL "m0/delay_q_25" BEL
+        "m0/delay_q_24" BEL "m0/delay_q_23" BEL "m0/delay_q_22" BEL
+        "m0/delay_q_21" BEL "m0/delay_q_20" BEL "m0/delay_q_19" BEL
+        "m0/delay_q_18" BEL "m0/delay_q_17" BEL "m0/delay_q_16" BEL
+        "m0/delay_q_15" BEL "m0/delay_q_14" BEL "m0/delay_q_13" BEL
+        "m0/delay_q_12" BEL "m0/delay_q_11" BEL "m0/delay_q_10" BEL
+        "m0/delay_q_9" BEL "m0/delay_q_8" BEL "m0/delay_q_7" BEL
+        "m0/delay_q_6" BEL "m0/delay_q_5" BEL "m0/delay_q_4" BEL
+        "m0/delay_q_3" BEL "m0/delay_q_2" BEL "m0/delay_q_1" BEL
+        "m0/delay_q_0" BEL "m0/vsync_2" BEL "m0/href_2" BEL "m0/pclk_2" BEL
+        "m0/href_1" BEL "m0/vsync_1" BEL "m0/pclk_1" BEL
+        "m0/m0/state_q_FSM_FFd1" BEL "m0/m0/state_q_FSM_FFd2" BEL
+        "m0/m0/state_q_FSM_FFd3" BEL "m0/m0/state_q_FSM_FFd4" BEL
+        "m0/m0/idx_q_3" BEL "m0/m0/idx_q_2" BEL "m0/m0/idx_q_1" BEL
+        "m0/m0/idx_q_0" BEL "m0/m0/start_q" BEL "m0/m0/counter_q_8" BEL
+        "m0/m0/counter_q_7" BEL "m0/m0/counter_q_6" BEL "m0/m0/counter_q_5"
+        BEL "m0/m0/counter_q_4" BEL "m0/m0/counter_q_3" BEL
+        "m0/m0/counter_q_2" BEL "m0/m0/counter_q_1" BEL "m0/m0/counter_q_0"
+        BEL "m0/m0/wr_data_q_8" BEL "m0/m0/wr_data_q_7" BEL
+        "m0/m0/wr_data_q_6" BEL "m0/m0/wr_data_q_5" BEL "m0/m0/wr_data_q_4"
+        BEL "m0/m0/wr_data_q_3" BEL "m0/m0/wr_data_q_2" BEL
+        "m0/m0/wr_data_q_1" BEL "m0/m0/wr_data_q_0" BEL "m1/m3/m6/w_ptr_q_10"
+        BEL "m1/m3/m6/w_ptr_q_9" BEL "m1/m3/m6/w_ptr_q_8" BEL
+        "m1/m3/m6/w_ptr_q_7" BEL "m1/m3/m6/w_ptr_q_6" BEL "m1/m3/m6/w_ptr_q_5"
+        BEL "m1/m3/m6/w_ptr_q_4" BEL "m1/m3/m6/w_ptr_q_3" BEL
+        "m1/m3/m6/w_ptr_q_2" BEL "m1/m3/m6/w_ptr_q_1" BEL "m1/m3/m6/w_ptr_q_0"
+        BEL "m1/m3/temp3_q_4" BEL "m1/m3/temp3_q_3" BEL "m1/m3/temp3_q_2" BEL
+        "m1/m3/temp3_q_1" BEL "m1/m3/temp3_q_0" BEL "m1/m3/temp2_q_4" BEL
+        "m1/m3/temp2_q_3" BEL "m1/m3/temp2_q_2" BEL "m1/m3/temp2_q_1" BEL
+        "m1/m3/temp2_q_0" BEL "m1/m3/temp1_q_4" BEL "m1/m3/temp1_q_3" BEL
+        "m1/m3/temp1_q_2" BEL "m1/m3/temp1_q_1" BEL "m1/m3/temp1_q_0" BEL
+        "m1/m3/m6/data_count_r_9" BEL "m1/m3/m6/empty" BEL
+        "m1/m3/m6/r_ptr_sync_10" BEL "m1/m3/m6/r_ptr_sync_9" BEL
+        "m1/m3/m6/r_ptr_sync_8" BEL "m1/m3/m6/r_ptr_sync_7" BEL
+        "m1/m3/m6/r_ptr_sync_6" BEL "m1/m3/m6/r_ptr_sync_5" BEL
+        "m1/m3/m6/r_ptr_sync_4" BEL "m1/m3/m6/r_ptr_sync_3" BEL
+        "m1/m3/m6/r_ptr_sync_2" BEL "m1/m3/m6/r_ptr_sync_1" BEL
+        "m1/m3/m6/r_ptr_sync_0" BEL "m1/m3/m6/r_grey_sync_9" BEL
+        "m1/m3/m6/r_grey_sync_8" BEL "m1/m3/m6/r_grey_sync_7" BEL
+        "m1/m3/m6/r_grey_sync_6" BEL "m1/m3/m6/r_grey_sync_5" BEL
+        "m1/m3/m6/r_grey_sync_4" BEL "m1/m3/m6/r_grey_sync_3" BEL
+        "m1/m3/m6/r_grey_sync_2" BEL "m1/m3/m6/r_grey_sync_1" BEL
+        "m1/m3/m6/r_grey_sync_0" BEL "m1/m3/m6/w_grey_sync_9" BEL
+        "m1/m3/m6/w_grey_sync_8" BEL "m1/m3/m6/w_grey_sync_7" BEL
+        "m1/m3/m6/w_grey_sync_6" BEL "m1/m3/m6/w_grey_sync_5" BEL
+        "m1/m3/m6/w_grey_sync_4" BEL "m1/m3/m6/w_grey_sync_3" BEL
+        "m1/m3/m6/w_grey_sync_1" BEL "m1/sobel_addr_q_14" BEL
+        "m1/sobel_addr_q_13" BEL "m1/sobel_addr_q_12" BEL "m1/sobel_addr_q_11"
+        BEL "m1/sobel_addr_q_10" BEL "m1/sobel_addr_q_9" BEL
+        "m1/sobel_addr_q_8" BEL "m1/sobel_addr_q_7" BEL "m1/sobel_addr_q_6"
+        BEL "m1/sobel_addr_q_5" BEL "m1/sobel_addr_q_4" BEL
+        "m1/sobel_addr_q_3" BEL "m1/sobel_addr_q_2" BEL "m1/sobel_addr_q_1"
+        BEL "m1/sobel_addr_q_0" BEL "m1/colored_addr_q_14" BEL
+        "m1/colored_addr_q_13" BEL "m1/colored_addr_q_12" BEL
+        "m1/colored_addr_q_11" BEL "m1/colored_addr_q_10" BEL
+        "m1/colored_addr_q_9" BEL "m1/colored_addr_q_8" BEL
+        "m1/colored_addr_q_7" BEL "m1/colored_addr_q_6" BEL
+        "m1/colored_addr_q_5" BEL "m1/colored_addr_q_4" BEL
+        "m1/colored_addr_q_3" BEL "m1/colored_addr_q_2" BEL
+        "m1/colored_addr_q_1" BEL "m1/colored_addr_q_0" BEL
+        "m1/m3/m6/r_grey_sync_temp_9" BEL "m1/m3/m6/r_grey_sync_temp_8" BEL
+        "m1/m3/m6/r_grey_sync_temp_7" BEL "m1/m3/m6/r_grey_sync_temp_6" BEL
+        "m1/m3/m6/r_grey_sync_temp_5" BEL "m1/m3/m6/r_grey_sync_temp_4" BEL
+        "m1/m3/m6/r_grey_sync_temp_3" BEL "m1/m3/m6/r_grey_sync_temp_2" BEL
+        "m1/m3/m6/r_grey_sync_temp_1" BEL "m1/m3/m6/r_grey_sync_temp_0" BEL
+        "m1/m3/m6/w_grey_sync_temp_9" BEL "m1/m3/m6/w_grey_sync_temp_8" BEL
+        "m1/m3/m6/w_grey_sync_temp_7" BEL "m1/m3/m6/w_grey_sync_temp_6" BEL
+        "m1/m3/m6/w_grey_sync_temp_5" BEL "m1/m3/m6/w_grey_sync_temp_4" BEL
+        "m1/m3/m6/w_grey_sync_temp_3" BEL "m1/m3/m6/w_grey_sync_temp_1" BEL
+        "m1/m3/pixel_counter_q_10" BEL "m1/m3/pixel_counter_q_9" BEL
+        "m1/m3/pixel_counter_q_8" BEL "m1/m3/pixel_counter_q_7" BEL
+        "m1/m3/pixel_counter_q_6" BEL "m1/m3/pixel_counter_q_5" BEL
+        "m1/m3/pixel_counter_q_4" BEL "m1/m3/pixel_counter_q_3" BEL
+        "m1/m3/pixel_counter_q_2" BEL "m1/m3/pixel_counter_q_1" BEL
+        "m1/m3/pixel_counter_q_0" BEL "m1/rd_addr_q_14" BEL "m1/rd_addr_q_13"
+        BEL "m1/rd_addr_q_12" BEL "m1/rd_addr_q_11" BEL "m1/rd_addr_q_10" BEL
+        "m1/rd_addr_q_9" BEL "m1/rd_addr_q_8" BEL "m1/rd_addr_q_7" BEL
+        "m1/rd_addr_q_6" BEL "m1/rd_addr_q_5" BEL "m1/rd_addr_q_4" BEL
+        "m1/rd_addr_q_3" BEL "m1/rd_addr_q_2" BEL "m1/rd_addr_q_1" BEL
+        "m1/rd_addr_q_0" BEL "m1/m3/m6/full" BEL "m1/m3/m6/r_ptr_q_10" BEL
+        "m1/m3/m6/r_ptr_q_9" BEL "m1/m3/m6/r_ptr_q_8" BEL "m1/m3/m6/r_ptr_q_7"
+        BEL "m1/m3/m6/r_ptr_q_6" BEL "m1/m3/m6/r_ptr_q_5" BEL
+        "m1/m3/m6/r_ptr_q_4" BEL "m1/m3/m6/r_ptr_q_3" BEL "m1/m3/m6/r_ptr_q_2"
+        BEL "m1/m3/m6/r_ptr_q_1" BEL "m1/m3/m6/r_ptr_q_0" BEL
+        "m1/m3/addr_b_q_9" BEL "m1/m3/addr_b_q_8" BEL "m1/m3/addr_b_q_7" BEL
+        "m1/m3/addr_b_q_6" BEL "m1/m3/addr_b_q_5" BEL "m1/m3/addr_b_q_4" BEL
+        "m1/m3/addr_b_q_3" BEL "m1/m3/addr_b_q_2" BEL "m1/m3/addr_b_q_1" BEL
+        "m1/m3/addr_b_q_0" BEL "m1/orig_q" BEL "m1/m0/refresh_ctr_q_10" BEL
+        "m1/m0/refresh_ctr_q_9" BEL "m1/m0/refresh_ctr_q_8" BEL
+        "m1/m0/refresh_ctr_q_7" BEL "m1/m0/refresh_ctr_q_6" BEL
+        "m1/m0/refresh_ctr_q_5" BEL "m1/m0/refresh_ctr_q_4" BEL
+        "m1/m0/refresh_ctr_q_3" BEL "m1/m0/refresh_ctr_q_2" BEL
+        "m1/m0/refresh_ctr_q_1" BEL "m1/m0/refresh_ctr_q_0" BEL
+        "m1/m0/s_addr_q_12" BEL "m1/m0/s_addr_q_11" BEL "m1/m0/s_addr_q_10"
+        BEL "m1/m0/s_addr_q_9" BEL "m1/m0/s_addr_q_8" BEL "m1/m0/s_addr_q_7"
+        BEL "m1/m0/s_addr_q_6" BEL "m1/m0/s_addr_q_5" BEL "m1/m0/s_addr_q_4"
+        BEL "m1/m0/s_addr_q_3" BEL "m1/m0/s_addr_q_2" BEL "m1/m0/s_addr_q_1"
+        BEL "m1/m0/s_addr_q_0" BEL "m1/m0/s_ba_q_1" BEL "m1/m0/s_ba_q_0" BEL
+        "m1/m0/tri_q" BEL "m1/m0/cmd_q_3" BEL "m1/m0/cmd_q_2" BEL
+        "m1/m0/cmd_q_1" BEL "m1/m0/cmd_q_0" BEL "m1/m0/delay_ctr_q_15" BEL
+        "m1/m0/delay_ctr_q_14" BEL "m1/m0/delay_ctr_q_13" BEL
+        "m1/m0/delay_ctr_q_12" BEL "m1/m0/delay_ctr_q_11" BEL
+        "m1/m0/delay_ctr_q_10" BEL "m1/m0/delay_ctr_q_9" BEL
+        "m1/m0/delay_ctr_q_8" BEL "m1/m0/delay_ctr_q_7" BEL
+        "m1/m0/delay_ctr_q_6" BEL "m1/m0/delay_ctr_q_5" BEL
+        "m1/m0/delay_ctr_q_4" BEL "m1/m0/delay_ctr_q_3" BEL
+        "m1/m0/delay_ctr_q_2" BEL "m1/m0/delay_ctr_q_1" BEL
+        "m1/m0/delay_ctr_q_0" BEL "m1/m0/burst_index_q_9" BEL
+        "m1/m0/burst_index_q_8" BEL "m1/m0/burst_index_q_7" BEL
+        "m1/m0/burst_index_q_6" BEL "m1/m0/burst_index_q_5" BEL
+        "m1/m0/burst_index_q_4" BEL "m1/m0/burst_index_q_3" BEL
+        "m1/m0/burst_index_q_2" BEL "m1/m0/burst_index_q_1" BEL
+        "m1/m0/burst_index_q_0" BEL "m1/m0/state_q_3" BEL "m1/m0/state_q_2"
+        BEL "m1/m0/state_q_1" BEL "m1/m0/state_q_0" BEL "m1/m0/nxt_q_3" BEL
+        "m1/m0/nxt_q_2" BEL "m1/m0/nxt_q_1" BEL "m1/m0/nxt_q_0" BEL
+        "m1/m0/s2f_data_valid_q" BEL "m1/m0/rw_q" BEL "m1/m0/f_addr_q_14" BEL
+        "m1/m0/f_addr_q_13" BEL "m1/m0/f_addr_q_12" BEL "m1/m0/f_addr_q_11"
+        BEL "m1/m0/f_addr_q_10" BEL "m1/m0/f_addr_q_9" BEL "m1/m0/f_addr_q_8"
+        BEL "m1/m0/f_addr_q_7" BEL "m1/m0/f_addr_q_6" BEL "m1/m0/f_addr_q_5"
+        BEL "m1/m0/f_addr_q_4" BEL "m1/m0/f_addr_q_3" BEL "m1/m0/f_addr_q_2"
+        BEL "m1/m0/f_addr_q_1" BEL "m1/m0/f_addr_q_0" BEL "m1/m2/w_ptr_q_10"
+        BEL "m1/m2/w_ptr_q_9" BEL "m1/m2/w_ptr_q_8" BEL "m1/m2/w_ptr_q_7" BEL
+        "m1/m2/w_ptr_q_6" BEL "m1/m2/w_ptr_q_5" BEL "m1/m2/w_ptr_q_4" BEL
+        "m1/m2/w_ptr_q_3" BEL "m1/m2/w_ptr_q_2" BEL "m1/m2/w_ptr_q_1" BEL
+        "m1/m2/w_ptr_q_0" BEL "m1/m2/data_count_w_9" BEL
+        "m1/m2/data_count_w_8" BEL "m1/m2/data_count_w_7" BEL
+        "m1/m2/data_count_w_6" BEL "m1/m2/data_count_w_5" BEL
+        "m1/m2/data_count_w_4" BEL "m1/m2/data_count_w_3" BEL
+        "m1/m2/data_count_w_2" BEL "m1/m2/data_count_w_1" BEL
+        "m1/m2/r_grey_sync_9" BEL "m1/m2/r_grey_sync_8" BEL
+        "m1/m2/r_grey_sync_7" BEL "m1/m2/r_grey_sync_6" BEL
+        "m1/m2/r_grey_sync_3" BEL "m1/m2/r_grey_sync_2" BEL
+        "m1/m2/r_grey_sync_1" BEL "m1/m2/r_grey_sync_0" BEL
+        "m1/m2/r_grey_sync_temp_9" BEL "m1/m2/r_grey_sync_temp_8" BEL
+        "m1/m2/r_grey_sync_temp_7" BEL "m1/m2/r_grey_sync_temp_6" BEL
+        "m1/m2/r_grey_sync_temp_3" BEL "m1/m2/r_grey_sync_temp_2" BEL
+        "m1/m2/r_grey_sync_temp_1" BEL "m1/m2/r_grey_sync_temp_0" BEL
+        "m1/m2/full" BEL "m0/m2/w_ptr_q_10" BEL "m0/m2/w_ptr_q_9" BEL
+        "m0/m2/w_ptr_q_8" BEL "m0/m2/w_ptr_q_7" BEL "m0/m2/w_ptr_q_6" BEL
+        "m0/m2/w_ptr_q_5" BEL "m0/m2/w_ptr_q_4" BEL "m0/m2/w_ptr_q_3" BEL
+        "m0/m2/w_ptr_q_2" BEL "m0/m2/w_ptr_q_1" BEL "m0/m2/w_ptr_q_0" BEL
+        "m0/m2/data_count_r_9" BEL "m0/m2/data_count_r_8" BEL
+        "m0/m2/data_count_r_7" BEL "m0/m2/data_count_r_6" BEL
+        "m0/m2/data_count_r_5" BEL "m0/m2/data_count_r_4" BEL
+        "m0/m2/data_count_r_3" BEL "m0/m2/data_count_r_2" BEL
+        "m0/m2/data_count_r_1" BEL "m0/m2/data_count_r_0" BEL "m0/m2/empty"
+        BEL "m0/m2/r_ptr_sync_10" BEL "m0/m2/r_ptr_sync_9" BEL
+        "m0/m2/r_ptr_sync_8" BEL "m0/m2/r_ptr_sync_7" BEL "m0/m2/r_ptr_sync_6"
+        BEL "m0/m2/r_ptr_sync_5" BEL "m0/m2/r_ptr_sync_4" BEL
+        "m0/m2/r_ptr_sync_3" BEL "m0/m2/r_ptr_sync_2" BEL "m0/m2/r_ptr_sync_1"
+        BEL "m0/m2/r_ptr_sync_0" BEL "m0/m2/w_grey_sync_9" BEL
+        "m0/m2/w_grey_sync_8" BEL "m0/m2/w_grey_sync_7" BEL
+        "m0/m2/w_grey_sync_4" BEL "m0/m2/w_grey_sync_3" BEL
+        "m0/m2/w_grey_sync_2" BEL "m0/m2/w_grey_sync_1" BEL
+        "m0/m2/w_grey_sync_0" BEL "m0/m2/r_grey_sync_9" BEL
+        "m0/m2/r_grey_sync_8" BEL "m0/m2/r_grey_sync_7" BEL
+        "m0/m2/r_grey_sync_6" BEL "m0/m2/r_grey_sync_3" BEL
+        "m0/m2/r_grey_sync_2" BEL "m0/m2/r_grey_sync_1" BEL
+        "m0/m2/r_grey_sync_0" BEL "m0/m2/w_grey_sync_temp_9" BEL
+        "m0/m2/w_grey_sync_temp_8" BEL "m0/m2/w_grey_sync_temp_7" BEL
+        "m0/m2/w_grey_sync_temp_4" BEL "m0/m2/w_grey_sync_temp_3" BEL
+        "m0/m2/w_grey_sync_temp_2" BEL "m0/m2/w_grey_sync_temp_1" BEL
+        "m0/m2/w_grey_sync_temp_0" BEL "m0/m2/r_grey_sync_temp_9" BEL
+        "m0/m2/r_grey_sync_temp_8" BEL "m0/m2/r_grey_sync_temp_7" BEL
+        "m0/m2/r_grey_sync_temp_6" BEL "m0/m2/r_grey_sync_temp_3" BEL
+        "m0/m2/r_grey_sync_temp_2" BEL "m0/m2/r_grey_sync_temp_1" BEL
+        "m0/m2/r_grey_sync_temp_0" BEL "m0/m2/full" BEL "m0/m2/r_ptr_q_10" BEL
+        "m0/m2/r_ptr_q_9" BEL "m0/m2/r_ptr_q_8" BEL "m0/m2/r_ptr_q_7" BEL
+        "m0/m2/r_ptr_q_6" BEL "m0/m2/r_ptr_q_5" BEL "m0/m2/r_ptr_q_4" BEL
+        "m0/m2/r_ptr_q_3" BEL "m0/m2/r_ptr_q_2" BEL "m0/m2/r_ptr_q_1" BEL
+        "m0/m2/r_ptr_q_0" BEL "m0/m3/state_reg_FSM_FFd1" BEL
+        "m0/m3/state_reg_FSM_FFd2" BEL "m0/m3/timer_reg_20" BEL
+        "m0/m3/timer_reg_19" BEL "m0/m3/timer_reg_18" BEL "m0/m3/timer_reg_17"
+        BEL "m0/m3/timer_reg_16" BEL "m0/m3/timer_reg_15" BEL
+        "m0/m3/timer_reg_14" BEL "m0/m3/timer_reg_13" BEL "m0/m3/timer_reg_12"
+        BEL "m0/m3/timer_reg_11" BEL "m0/m3/timer_reg_10" BEL
+        "m0/m3/timer_reg_9" BEL "m0/m3/timer_reg_8" BEL "m0/m3/timer_reg_7"
+        BEL "m0/m3/timer_reg_6" BEL "m0/m3/timer_reg_5" BEL
+        "m0/m3/timer_reg_4" BEL "m0/m3/timer_reg_3" BEL "m0/m3/timer_reg_2"
+        BEL "m0/m3/timer_reg_1" BEL "m0/m3/timer_reg_0" BEL "m0/m0/scl_q" BEL
+        "m1/m3/state_q" BEL "m1/state_q" BEL "m1/m0/refresh_flag_q" BEL
+        "m1/m0/rw_en_q" BEL "m1/m0/s2f_data_q_0" BEL "m1/m0/s2f_data_q_1" BEL
+        "m1/m0/s2f_data_q_2" BEL "m1/m0/s2f_data_q_3" BEL "m1/m0/s2f_data_q_4"
+        BEL "m1/m0/s2f_data_q_5" BEL "m1/m0/s2f_data_q_6" BEL
+        "m1/m0/s2f_data_q_7" BEL "m1/m0/s2f_data_q_8" BEL "m1/m0/s2f_data_q_9"
+        BEL "m1/m0/s2f_data_q_10" BEL "m1/m0/s2f_data_q_11" BEL
+        "m1/m0/s2f_data_q_12" BEL "m1/m0/s2f_data_q_13" BEL
+        "m1/m0/s2f_data_q_14" BEL "m1/m0/s2f_data_q_15" BEL
+        "m1/m0/f2s_data_q_15" BEL "m1/m0/f2s_data_q_14" BEL
+        "m1/m0/f2s_data_q_13" BEL "m1/m0/f2s_data_q_12" BEL
+        "m1/m0/f2s_data_q_11" BEL "m1/m0/f2s_data_q_10" BEL
+        "m1/m0/f2s_data_q_9" BEL "m1/m0/f2s_data_q_8" BEL "m1/m0/f2s_data_q_7"
+        BEL "m1/m0/f2s_data_q_6" BEL "m1/m0/f2s_data_q_5" BEL
+        "m1/m0/f2s_data_q_4" BEL "m1/m0/f2s_data_q_3" BEL "m1/m0/f2s_data_q_2"
+        BEL "m1/m0/f2s_data_q_1" BEL "m1/m0/f2s_data_q_0" BEL "m0/m0/sda_q"
+        PIN "m1/m3/m6/m0/Mram_ram_pins<20>" PIN
+        "m1/m3/m6/m0/Mram_ram_pins<21>" PIN "m1/m3/m1/Mram_ram_pins<20>" PIN
+        "m1/m3/m1/Mram_ram_pins<21>" PIN "m1/m3/m0/Mram_ram_pins<20>" PIN
+        "m1/m3/m0/Mram_ram_pins<21>" PIN "m1/m3/m4/Mram_ram_pins<20>" PIN
+        "m1/m3/m4/Mram_ram_pins<21>" PIN "m1/m3/m3/Mram_ram_pins<20>" PIN
+        "m1/m3/m3/Mram_ram_pins<21>" PIN "m1/m3/m2/Mram_ram_pins<20>" PIN
+        "m1/m3/m2/Mram_ram_pins<21>" PIN "m1/m3/m5/Mram_ram_pins<20>" PIN
+        "m1/m3/m5/Mram_ram_pins<21>" PIN "m1/m2/m0/Mram_ram_pins<20>" PIN
+        "m0/m2/m0/Mram_ram_pins<20>" PIN "m0/m2/m0/Mram_ram_pins<21>" BEL
+        "m1/m3/m6/Mshreg_r_grey_sync_10" BEL "m1/m3/m6/r_grey_sync_10" BEL
+        "m1/m3/m6/Mshreg_w_grey_sync_10" BEL "m1/m3/m6/w_grey_sync_10" BEL
+        "m1/m3/m6/Mshreg_w_grey_sync_2" BEL "m1/m3/m6/w_grey_sync_2" BEL
+        "m1/m3/m6/Mshreg_w_grey_sync_0" BEL "m1/m3/m6/w_grey_sync_0" BEL
+        "m1/m2/Mshreg_r_grey_sync_10" BEL "m1/m2/r_grey_sync_10" BEL
+        "m1/m2/Mshreg_r_grey_sync_5" BEL "m1/m2/r_grey_sync_5" BEL
+        "m1/m2/Mshreg_r_grey_sync_4" BEL "m1/m2/r_grey_sync_4" BEL
+        "m0/m2/Mshreg_w_grey_sync_10" BEL "m0/m2/w_grey_sync_10" BEL
+        "m0/m2/Mshreg_w_grey_sync_6" BEL "m0/m2/w_grey_sync_6" BEL
+        "m0/m2/Mshreg_w_grey_sync_5" BEL "m0/m2/w_grey_sync_5" BEL
+        "m0/m2/Mshreg_r_grey_sync_10" BEL "m0/m2/r_grey_sync_10" BEL
+        "m0/m2/Mshreg_r_grey_sync_5" BEL "m0/m2/r_grey_sync_5" BEL
+        "m0/m2/Mshreg_r_grey_sync_4" BEL "m0/m2/r_grey_sync_4" PIN
+        "oddr2_primitive_pins<1>" PIN "oddr2_primitive_pins<2>" PIN
+        "oddr2_primitive_pins<1>" PIN "oddr2_primitive_pins<2>";
+PIN m1/m2/m0/Mram_ram_pins<21> = BEL "m1/m2/m0/Mram_ram" PINNAME CLKB;
+PIN m_cap/Mram_ram20_pins<26> = BEL "m_cap/Mram_ram20" PINNAME CLKA;
+PIN m_cap/Mram_ram19_pins<26> = BEL "m_cap/Mram_ram19" PINNAME CLKA;
+PIN m_cap/Mram_ram18_pins<26> = BEL "m_cap/Mram_ram18" PINNAME CLKA;
+PIN m_cap/Mram_ram17_pins<26> = BEL "m_cap/Mram_ram17" PINNAME CLKA;
+PIN m_cap/Mram_ram16_pins<28> = BEL "m_cap/Mram_ram16" PINNAME CLKA;
+PIN m_cap/Mram_ram15_pins<28> = BEL "m_cap/Mram_ram15" PINNAME CLKA;
+PIN m_cap/Mram_ram13_pins<28> = BEL "m_cap/Mram_ram13" PINNAME CLKA;
+PIN m_cap/Mram_ram12_pins<28> = BEL "m_cap/Mram_ram12" PINNAME CLKA;
+PIN m_cap/Mram_ram14_pins<28> = BEL "m_cap/Mram_ram14" PINNAME CLKA;
+PIN m_cap/Mram_ram11_pins<28> = BEL "m_cap/Mram_ram11" PINNAME CLKA;
+PIN m_cap/Mram_ram10_pins<28> = BEL "m_cap/Mram_ram10" PINNAME CLKA;
+PIN m_cap/Mram_ram9_pins<28> = BEL "m_cap/Mram_ram9" PINNAME CLKA;
+PIN m_cap/Mram_ram8_pins<28> = BEL "m_cap/Mram_ram8" PINNAME CLKA;
+PIN m_cap/Mram_ram7_pins<28> = BEL "m_cap/Mram_ram7" PINNAME CLKA;
+PIN m_cap/Mram_ram6_pins<28> = BEL "m_cap/Mram_ram6" PINNAME CLKA;
+PIN m_cap/Mram_ram5_pins<28> = BEL "m_cap/Mram_ram5" PINNAME CLKA;
+PIN m_cap/Mram_ram4_pins<28> = BEL "m_cap/Mram_ram4" PINNAME CLKA;
+PIN m_cap/Mram_ram3_pins<28> = BEL "m_cap/Mram_ram3" PINNAME CLKA;
+PIN m_cap/Mram_ram2_pins<28> = BEL "m_cap/Mram_ram2" PINNAME CLKA;
+PIN m_cap/Mram_ram1_pins<28> = BEL "m_cap/Mram_ram1" PINNAME CLKA;
+TIMEGRP m2_m1_clkdv = BEL "m1/m2/empty" BEL "m1/m2/w_grey_sync_9" BEL
+        "m1/m2/w_grey_sync_8" BEL "m1/m2/w_grey_sync_7" BEL
+        "m1/m2/w_grey_sync_6" BEL "m1/m2/w_grey_sync_3" BEL
+        "m1/m2/w_grey_sync_2" BEL "m1/m2/w_grey_sync_1" BEL
+        "m1/m2/w_grey_sync_0" BEL "m1/m2/w_grey_sync_temp_9" BEL
+        "m1/m2/w_grey_sync_temp_8" BEL "m1/m2/w_grey_sync_temp_7" BEL
+        "m1/m2/w_grey_sync_temp_6" BEL "m1/m2/w_grey_sync_temp_3" BEL
+        "m1/m2/w_grey_sync_temp_2" BEL "m1/m2/w_grey_sync_temp_1" BEL
+        "m1/m2/w_grey_sync_temp_0" BEL "m1/m2/r_ptr_q_10" BEL
+        "m1/m2/r_ptr_q_9" BEL "m1/m2/r_ptr_q_8" BEL "m1/m2/r_ptr_q_7" BEL
+        "m1/m2/r_ptr_q_6" BEL "m1/m2/r_ptr_q_5" BEL "m1/m2/r_ptr_q_4" BEL
+        "m1/m2/r_ptr_q_3" BEL "m1/m2/r_ptr_q_2" BEL "m1/m2/r_ptr_q_1" BEL
+        "m1/m2/r_ptr_q_0" BEL "m2/m1/clkout1_buf" BEL "m2/state_q_FSM_FFd1"
+        BEL "m2/state_q_FSM_FFd2" BEL "m2/m0/hctr_q_11" BEL "m2/m0/hctr_q_10"
+        BEL "m2/m0/hctr_q_9" BEL "m2/m0/hctr_q_8" BEL "m2/m0/hctr_q_7" BEL
+        "m2/m0/hctr_q_6" BEL "m2/m0/hctr_q_5" BEL "m2/m0/hctr_q_4" BEL
+        "m2/m0/hctr_q_3" BEL "m2/m0/hctr_q_2" BEL "m2/m0/hctr_q_1" BEL
+        "m2/m0/hctr_q_0" BEL "m2/m0/vctr_q_11" BEL "m2/m0/vctr_q_10" BEL
+        "m2/m0/vctr_q_9" BEL "m2/m0/vctr_q_8" BEL "m2/m0/vctr_q_7" BEL
+        "m2/m0/vctr_q_6" BEL "m2/m0/vctr_q_5" BEL "m2/m0/vctr_q_4" BEL
+        "m2/m0/vctr_q_3" BEL "m2/m0/vctr_q_2" BEL "m2/m0/vctr_q_1" BEL
+        "m2/m0/vctr_q_0" BEL "m2/m0/hsync_q" BEL "m2/m0/vsync_q" BEL
+        "m_cap/frame_id_vga_31" BEL "m_cap/frame_id_vga_30" BEL
+        "m_cap/frame_id_vga_29" BEL "m_cap/frame_id_vga_28" BEL
+        "m_cap/frame_id_vga_27" BEL "m_cap/frame_id_vga_26" BEL
+        "m_cap/frame_id_vga_25" BEL "m_cap/frame_id_vga_24" BEL
+        "m_cap/frame_id_vga_23" BEL "m_cap/frame_id_vga_22" BEL
+        "m_cap/frame_id_vga_21" BEL "m_cap/frame_id_vga_20" BEL
+        "m_cap/frame_id_vga_19" BEL "m_cap/frame_id_vga_18" BEL
+        "m_cap/frame_id_vga_17" BEL "m_cap/frame_id_vga_16" BEL
+        "m_cap/frame_id_vga_15" BEL "m_cap/frame_id_vga_14" BEL
+        "m_cap/frame_id_vga_13" BEL "m_cap/frame_id_vga_12" BEL
+        "m_cap/frame_id_vga_11" BEL "m_cap/frame_id_vga_10" BEL
+        "m_cap/frame_id_vga_9" BEL "m_cap/frame_id_vga_8" BEL
+        "m_cap/frame_id_vga_7" BEL "m_cap/frame_id_vga_6" BEL
+        "m_cap/frame_id_vga_5" BEL "m_cap/frame_id_vga_4" BEL
+        "m_cap/frame_id_vga_3" BEL "m_cap/frame_id_vga_2" BEL
+        "m_cap/frame_id_vga_1" BEL "m_cap/frame_id_vga_0" BEL
+        "m_cap/wr_addr_15" BEL "m_cap/wr_addr_14" BEL "m_cap/wr_addr_13" BEL
+        "m_cap/wr_addr_12" BEL "m_cap/wr_addr_11" BEL "m_cap/wr_addr_10" BEL
+        "m_cap/wr_addr_9" BEL "m_cap/wr_addr_8" BEL "m_cap/wr_addr_7" BEL
+        "m_cap/wr_addr_6" BEL "m_cap/wr_addr_5" BEL "m_cap/wr_addr_4" BEL
+        "m_cap/wr_addr_3" BEL "m_cap/wr_addr_2" BEL "m_cap/wr_addr_1" BEL
+        "m_cap/wr_addr_0" BEL "m_cap/pack_cnt_2" BEL "m_cap/pack_cnt_1" BEL
+        "m_cap/pack_cnt_0" BEL "m_cap/pack_reg_6" BEL "m_cap/pack_reg_5" BEL
+        "m_cap/pack_reg_4" BEL "m_cap/pack_reg_3" BEL "m_cap/pack_reg_2" BEL
+        "m_cap/pack_reg_1" BEL "m_cap/pack_reg_0" BEL "m_cap/cons_prev" BEL
+        "m_cap/cons_sync_2" BEL "m_cap/cons_sync_1" BEL "m_cap/cons_sync_0"
+        BEL "m_cap/capturing" BEL "m_cap/bram_empty_vga" PIN
+        "m1/m2/m0/Mram_ram_pins<21>" PIN "m_cap/Mram_ram20_pins<26>" PIN
+        "m_cap/Mram_ram19_pins<26>" PIN "m_cap/Mram_ram18_pins<26>" PIN
+        "m_cap/Mram_ram17_pins<26>" PIN "m_cap/Mram_ram16_pins<28>" PIN
+        "m_cap/Mram_ram15_pins<28>" PIN "m_cap/Mram_ram13_pins<28>" PIN
+        "m_cap/Mram_ram12_pins<28>" PIN "m_cap/Mram_ram14_pins<28>" PIN
+        "m_cap/Mram_ram11_pins<28>" PIN "m_cap/Mram_ram10_pins<28>" PIN
+        "m_cap/Mram_ram9_pins<28>" PIN "m_cap/Mram_ram8_pins<28>" PIN
+        "m_cap/Mram_ram7_pins<28>" PIN "m_cap/Mram_ram6_pins<28>" PIN
+        "m_cap/Mram_ram5_pins<28>" PIN "m_cap/Mram_ram4_pins<28>" PIN
+        "m_cap/Mram_ram3_pins<28>" PIN "m_cap/Mram_ram2_pins<28>" PIN
+        "m_cap/Mram_ram1_pins<28>" BEL "m1/m2/Mshreg_w_grey_sync_10" BEL
+        "m1/m2/w_grey_sync_10" BEL "m1/m2/Mshreg_w_grey_sync_5" BEL
+        "m1/m2/w_grey_sync_5" BEL "m1/m2/Mshreg_w_grey_sync_4" BEL
+        "m1/m2/w_grey_sync_4";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 50 MHz HIGH 50%;
+TS_m6_clkfx = PERIOD TIMEGRP "m6_clkfx" TS_sys_clk_pin * 3 HIGH 50%;
+TS_m2_m1_clkdv = PERIOD TIMEGRP "m2_m1_clkdv" TS_sys_clk_pin / 2 HIGH 50%;
+SCHEMATIC END;
+
